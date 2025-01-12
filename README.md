@@ -16,12 +16,12 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 
 Demo 1|Demo 2|Demo 3
 --|--|--
-<video src="demo/vids/demo_1.mp4" width="400" controls="controls" />|<video src="demo/vids/demo_2.mp4" width="400" controls="controls" />|<video src="demo/vids/demo_3.mp4" width="400" controls="controls" /></video>
+<video src="demo/vids/demo_1.mp4" width="400" controls="controls" ></video>|<video src="demo/vids/demo_2.mp4" width="400" controls="controls" ></video>|<video src="demo/vids/demo_3.mp4" width="400" controls="controls" ></video>
 
 
 Demo 4|Demo 5|Demo 6
 --|--|--
-<video src="demo/vids/demo_4.mp4" width="400" controls="controls" />|<video src="demo/vids/demo_5.mp4" width="400" controls="controls" />|<video src="demo/vids/demo_6.mp4" width="400" controls="controls" /></video>
+<video src="demo/vids/demo_4.mp4" width="400" controls="controls"></video>|<video src="demo/vids/demo_5.mp4" width="400" controls="controls"></video>|<video src="demo/vids/demo_6.mp4" width="400" controls="controls"></video>
 
 <div align="center">
   <img src="demo/figs/overview_example-1.png" alt="image2" width="700"/>
