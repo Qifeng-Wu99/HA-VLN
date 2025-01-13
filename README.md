@@ -23,7 +23,7 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
   - [🌆 Human-Scene Fusion](#-human-scene-fusion)
   - [🖥️ Real-time Human Rendering](#-real-time-human-rendering)
   - [📊 Training](#-training)
-  - 
+  - [📈 Visualization](#-visualization)
 
 ---
 
@@ -79,7 +79,7 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 
  
 
-## Visualization
+## 📈 Visualization
 
 **We present several annotated instances of human subjects from the proposed HAPS 2.0 Dataset (Overall and single), showcasing a variety of well-aligned motions, movements, and interations.** 
 
