@@ -1,4 +1,4 @@
-# HA-VLN-CE
+# Human-Aware Vision-and-Language Nagivation (HA-VLN)
 ![License](https://img.shields.io/badge/license-MIT-blue) 
 
 * [Project Web Page](https://havln-project-website.vercel.app/)
