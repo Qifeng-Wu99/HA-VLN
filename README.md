@@ -4,6 +4,74 @@
 * [Project Web Page](https://havln-project-website.vercel.app/)
 * [Dataset](https://www.dropbox.com/home/HA-VLN)
 
+## Table of Contents
+
+- [HA-VLN-CE](#ha-vln-ce)
+  - [Table of Contents](#table-of-contents)
+  - [🔧 Setup Environment](#setup-environment)
+  - [🐍 Create Conda Environment](#create-conda-environment)
+  - [📥 Download Dataset](#download-dataset)
+  - [🔄 Dataset Preprocessing](#dataset-preprocessing)
+  - [🏗️ Build Habitat](#build-habitat)
+  - [🚀 Run HAVLN Simulator](#run-havln-simulator)
+  - [🌆 Human-Scene Fusion](#human-scene-fusion)
+  - [🖥️ Real-time Human Rendering](#real-time-human-rendering)
+  - [📊 Training](#training)
+
+---
+
+## 🔧 Setup Environment
+
+ 
+
+---
+
+## 🐍 Create Conda Environment
+
+ 
+
+---
+
+## 📥 Download Dataset
+
+ 
+
+---
+
+## 🔄 Dataset Preprocessing
+
+ 
+
+---
+
+## 🏗️ Build Habitat
+
+ 
+
+---
+
+## 🚀 Run HAVLN Simulator
+
+ 
+
+---
+
+## 🌆 Human-Scene Fusion
+
+ 
+
+---
+
+## 🖥️ Real-time Human Rendering
+
+ 
+
+---
+
+## 📊 Training
+
+ 
+
 ## Overall View
 <div align="center">
   <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
