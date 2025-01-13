@@ -12,16 +12,16 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 ## Table of Contents
 
 - [HA-VLN-CE](#ha-vln-ce)
-  - [Table of Contents](#table-of-contents)
-  - [🔧 Setup Environment](#setup-environment)
-  - [🐍 Create Conda Environment](#create-conda-environment)
-  - [📥 Download Dataset](#download-dataset)
-  - [🔄 Dataset Preprocessing](#dataset-preprocessing)
-  - [🏗️ Build Habitat](#build-habitat)
-  - [🚀 Run HAVLN Simulator](#run-havln-simulator)
-  - [🌆 Human-Scene Fusion](#human-scene-fusion)
-  - [🖥️ Real-time Human Rendering](#real-time-human-rendering)
-  - [📊 Training](#training)
+  - [Table of Contents](#-table-of-contents)
+  - [🔧 Setup Environment](#-setup-environment)
+  - [🐍 Create Conda Environment](#-create-conda-environment)
+  - [📥 Download Dataset](#-download-dataset)
+  - [🔄 Dataset Preprocessing](#-dataset-preprocessing)
+  - [🏗️ Build Habitat](#-build-habitat)
+  - [🚀 Run HAVLN Simulator](#-run-havln-simulator)
+  - [🌆 Human-Scene Fusion](#-human-scene-fusion)
+  - [🖥️ Real-time Human Rendering](#-real-time-human-rendering)
+  - [📊 Training](#-training)
   - 
 
 ---
