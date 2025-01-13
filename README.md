@@ -1,6 +1,9 @@
 # HA-VLN-CE
 ![License](https://img.shields.io/badge/license-MIT-blue) 
 
+* [Project Web Page](https://havln-project-website.vercel.app/)
+* [Dataset](https://www.dropbox.com/home/HA-VLN)
+
 ## Overall View
 <div align="center">
   <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
@@ -55,7 +58,3 @@ This project is licensed under the MIT License. For more details, see the [LICEN
 
 ---
 
-### Project Links
-
-- [Project Homepage](https://havln-project-website.vercel.app/)
-- [Download Dataset](https://www.dropbox.com/home/HA-VLN)
