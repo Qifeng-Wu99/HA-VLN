@@ -4,6 +4,11 @@
 * [Project Web Page](https://havln-project-website.vercel.app/)
 * [Dataset](https://www.dropbox.com/home/HA-VLN)
 
+<div align="center">
+  <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
+</div>
+Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist humans in everyday environments. However, current VLN systems lack social awareness and rely on simplified instructions with static environments, limiting Sim2Real realizations. To narrow these gaps, we present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (HA-VLN-DE) and continuous (HA-VLN-CE) environments with social behaviors. The HA-VLN Simulator enables real-time rendering of human activities and provides unified environments for navigation development. It introduces the Human Activity and Pose Simulation (HAPS) Dataset 2.0 with detailed 3D human motion models and the HA Room-to-Room (HA-R2R) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model (HA-VLN-VL) and a Cross-Model Attention model (HA-VLN-CMA) to address visual-language understanding and dynamic decision-making challenges. Comprehensive evaluations and analysis show that dynamic environments with human activities significantly challenge current systems, highlighting the need for specialized human-aware navigation systems for real-world deployment.
+
 ## Table of Contents
 
 - [HA-VLN-CE](#ha-vln-ce)
@@ -17,6 +22,7 @@
   - [🌆 Human-Scene Fusion](#human-scene-fusion)
   - [🖥️ Real-time Human Rendering](#real-time-human-rendering)
   - [📊 Training](#training)
+  - 
 
 ---
 
@@ -72,13 +78,7 @@
 
  
 
-## Overall View
-<div align="center">
-  <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
-</div>
-Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist humans in everyday environments. However, current VLN systems lack social awareness and rely on simplified instructions with static environments, limiting Sim2Real realizations. To narrow these gaps, we present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (HA-VLN-DE) and continuous (HA-VLN-CE) environments with social behaviors. The HA-VLN Simulator enables real-time rendering of human activities and provides unified environments for navigation development. It introduces the Human Activity and Pose Simulation (HAPS) Dataset 2.0 with detailed 3D human motion models and the HA Room-to-Room (HA-R2R) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model (HA-VLN-VL) and a Cross-Model Attention model (HA-VLN-CMA) to address visual-language understanding and dynamic decision-making challenges. Comprehensive evaluations and analysis show that dynamic environments with human activities significantly challenge current systems, highlighting the need for specialized human-aware navigation systems for real-world deployment.
-
-## HA-VLN-CE Simulator
+## Visualization
 <div align="center">
   <img src="demo/figs/simulator_draft_v2-1.png" alt="image" width="700"/>
 </div>
@@ -109,7 +109,7 @@ Demo 4|Demo 5|Demo 6
 --|--|--
 <img src="demo/gifs/demo_4.gif" width="280">|<img src="demo/gifs/demo_5.gif" width="280">|<img src="demo/gifs/demo_6.gif" width="280">
 
-## Navigation Visualization
+**Navigation Visualization**
 
 Navigation Demo 1|Navigation Demo 2
 --|--
