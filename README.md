@@ -41,7 +41,11 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 
 ## 📥 Download Dataset
 
- 
+To use the simulator, download the [Matterport3D Dataset](https://niessner.github.io/Matterport/) (access required).
+
+```bash
+python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_skybox_images undistorted_camera_parameters undistorted_depth_images
+```
 
 ---
 
