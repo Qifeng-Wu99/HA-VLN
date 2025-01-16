@@ -11,9 +11,4 @@ class Calculate_Metric():
         metric['TCR'] = max(0, metric['collisions']['count'] - self.num_collisions[str(ep_id)])
         metric['CR'] = min(metric['TCR'], 1)
         metric['SR'] = metric['success'] * int(metric['TCR']==0)
-# def TCR(stats_episodes, ep_id):
-#     stats_episodes[ep_id]['TCR'] = max(0, stats_episodes[ep_id]['collisions']['count'] - self.num_collisions[str(ep_id)])
-# def CR():
-#     pass
-# def SR():
-#     pass
+

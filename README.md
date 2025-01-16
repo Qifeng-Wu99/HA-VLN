@@ -35,9 +35,9 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 Set up a Conda environment for the simulator.
 Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](https://github.com/MarSaKi/ETPNav/) (please note that we use python==3.7)
 
-And following [GroundDINO](https://github.com/IDEA-Research/GroundingDINO\)  to install GroundDINO (please note that we use supervision==0.11.1)
+And following [GroundDINO](https://github.com/IDEA-Research/GroundingDINO/)  to install GroundDINO (please note that we use supervision==0.11.1)
 
-And installing necessary packages for Agent.
+And installing necessary packages for Agent (please see Agent part).
 
 ---
 
@@ -65,7 +65,8 @@ python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_sk
 
 ## 🖥️ Real-time Human Rendering
 
-Human Rendering is defined in HASimulator/enviorments.py -> HAVLNCE class.
+Human Rendering is defined in the class **HAVLNCE** of HASimulator/enviorments.py.
+
 Human Rendering uses child threads for timing and the main thread for adding, adding and recalculating the required navmesh in real time.
 
 
@@ -81,7 +82,7 @@ SIMULATOR:
 
 ## 📊 Training
 
- To train agent of VLN-CE, you can use the script like orignal VLN-CE.
+ To train the agent of VLN-CE, you can use the script in orignal VLN-CE.
  ```
  cd Agent/VLN-CE
  python run.py \
