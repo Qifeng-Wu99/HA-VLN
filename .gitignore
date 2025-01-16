@@ -142,3 +142,4 @@ logs/
 
 vis/
 tmp/
+*.pth

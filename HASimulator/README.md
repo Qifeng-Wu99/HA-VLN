@@ -23,6 +23,7 @@ collisions_detail: List whether there are collisions at each step
 human_counting: Count the number of humans present on the current observation.
 
 distance_to_human and collisions_detail can be turn on by adding "DISTANCE_TO_HUMAN" and "COLLISIONS_DETAIL" into MEASUREMENTS in vlnce task config.
+
 ```
   MEASUREMENTS: [
     DISTANCE_TO_GOAL,
