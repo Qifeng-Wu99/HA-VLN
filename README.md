@@ -33,11 +33,11 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 
 ## 🐍 Create Conda Environment
 Set up a Conda environment for the simulator.
-Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](https://github.com/MarSaKi/ETPNav/) (please note that we use python==3.7)
+Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](https://github.com/MarSaKi/ETPNav/) (please note that we use python==3.7).
 
-And following [GroundDINO](https://github.com/IDEA-Research/GroundingDINO/)  to install GroundDINO (please note that we use supervision==0.11.1)
+And follow [GroundDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
 
-And installing necessary packages for Agent (please see Agent part).
+Finally, you should install necessary packages for Agent (please see Agent part).
 
 ---
 
