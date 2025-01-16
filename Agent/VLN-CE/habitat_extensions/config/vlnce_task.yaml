@@ -1,0 +1,57 @@
+ENVIRONMENT:
+  MAX_EPISODE_STEPS: 500
+SIMULATOR:
+  ADD_HUMAN: True
+  HUMAN_GLB_PATH: "/datadrive/HAVLN-CE/scripts/data_preprocess/human_motion/human_motion_glbs_v3"
+  HUMAN_INFO_PATH: "/datadrive/HAVLN-CE/scripts/motion_refine/adjust_phase4/human_motion_v9_sum_ver5.json"
+  RECOMPUTE_NAVMESH_PATH: data/datasets/recompute_navmesh
+  HUMAN_COUNTING: True
+  ACTION_SPACE_CONFIG: v0
+  AGENT_0:
+    SENSORS: [RGB_SENSOR, DEPTH_SENSOR]
+  FORWARD_STEP_SIZE: 0.25
+  TURN_ANGLE: 15
+  HABITAT_SIM_V0:
+    GPU_DEVICE_ID: 0
+    ALLOW_SLIDING: True
+  RGB_SENSOR:
+    WIDTH: 224
+    HEIGHT: 224
+    HFOV: 90
+    TYPE: HabitatSimRGBSensor
+  DEPTH_SENSOR:
+    WIDTH: 256
+    HEIGHT: 256
+TASK:
+  TYPE: VLN-v0
+  SUCCESS_DISTANCE: 3.0
+  SENSORS: [
+    INSTRUCTION_SENSOR,
+    SHORTEST_PATH_SENSOR,
+    VLN_ORACLE_PROGRESS_SENSOR
+  ]
+  INSTRUCTION_SENSOR_UUID: instruction
+  POSSIBLE_ACTIONS: [STOP, MOVE_FORWARD, TURN_LEFT, TURN_RIGHT]
+  MEASUREMENTS: [
+    DISTANCE_TO_GOAL,
+    SUCCESS,
+    SPL,
+    NDTW,
+    PATH_LENGTH,
+    ORACLE_SUCCESS,
+    STEPS_TAKEN,
+    COLLISIONS,
+    COLLISIONS_DETAIL,
+    DISTANCE_TO_HUMAN
+  ]
+  SUCCESS:
+    SUCCESS_DISTANCE: 3.0
+  SPL:
+    SUCCESS_DISTANCE: 3.0
+  NDTW:
+    GT_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}_gt.json.gz
+DATASET:
+  TYPE: VLN-CE-v1
+  SPLIT: train
+  DATA_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}.json.gz
+  SCENES_DIR: data/scene_datasets/

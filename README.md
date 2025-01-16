@@ -18,8 +18,6 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
   - [🐍 Create Conda Environment](#-create-conda-environment)
   - [📥 Download Dataset](#-download-dataset)
   - [🔄 Dataset Preprocessing](#-dataset-preprocessing)
-  - [🏗️ Build Habitat](#-build-habitat)
-  - [🚀 Run HAVLN Simulator](#-run-havln-simulator)
   - [🌆 Human-Scene Fusion](#-human-scene-fusion)
   - [🖥️ Real-time Human Rendering](#-real-time-human-rendering)
   - [📊 Training](#-training)
@@ -59,18 +57,6 @@ python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_sk
 
 ---
 
-## 🏗️ Build Habitat
-
- 
-
----
-
-## 🚀 Run HAVLN Simulator
-
- 
-
----
-
 ## 🌆 Human-Scene Fusion
 
  
@@ -80,6 +66,8 @@ python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_sk
 ## 🖥️ Real-time Human Rendering
 
 Human Rendering is defined in HASimulator/enviorments.py -> HAVLNCE class.
+Human Rendering uses child threads for timing and the main thread for adding, adding and recalculating the required navmesh in real time.
+
 
 To enable human rendering, you should follow these setting in vlnce task config.
 ```
