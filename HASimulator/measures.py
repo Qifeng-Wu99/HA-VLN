@@ -1,5 +1,5 @@
 
-from typing import Any, List, Union
+from typing import Any, List, Union, Tuple, Optional
 
 import numpy as np
 
@@ -96,6 +96,63 @@ class DistanceToHuman(Measure):
 
         self._previous_position = current_position
 
+
+@registry.register_measure
+class DistanceToGoal(Measure):
+    """The measure calculates a distance towards the goal."""
+
+    cls_uuid: str = "distance_to_goal"
+
+    def __init__(
+        self, sim: Simulator, config: Config, *args: Any, **kwargs: Any
+    ):
+        self._previous_position: Optional[Tuple[float, float, float]] = None
+        self._sim = sim
+        self._config = config
+        self._episode_view_points: Optional[
+            List[Tuple[float, float, float]]
+        ] = None
+
+        super().__init__(**kwargs)
+
+    def _get_uuid(self, *args: Any, **kwargs: Any) -> str:
+        return self.cls_uuid
+
+    def reset_metric(self, episode, *args: Any, **kwargs: Any):
+        self._previous_position = None
+        self._metric = None
+        if self._config.DISTANCE_TO == "VIEW_POINTS":
+            self._episode_view_points = [
+                view_point.agent_state.position
+                for goal in episode.goals
+                for view_point in goal.view_points
+            ]
+        self.update_metric(episode=episode, *args, **kwargs)  # type: ignore
+
+    def update_metric(
+        self, episode, *args: Any, **kwargs: Any
+    ):
+        current_position = self._sim.get_agent_state().position
+
+        if self._previous_position is None or not np.allclose(
+            self._previous_position, current_position, atol=1e-4
+        ):
+            if self._config.DISTANCE_TO == "POINT":
+                distance_to_target = euclidean_distance(
+                    current_position,
+                    [goal.position for goal in episode.goals],
+                )
+            elif self._config.DISTANCE_TO == "VIEW_POINTS":
+                distance_to_target = euclidean_distance(
+                    current_position, self._episode_view_points
+                )
+            else:
+                logger.error(
+                    f"Non valid DISTANCE_TO parameter was provided: {self._config.DISTANCE_TO}"
+                )
+
+            self._previous_position = current_position
+            self._metric = distance_to_target
 
 
 @registry.register_measure

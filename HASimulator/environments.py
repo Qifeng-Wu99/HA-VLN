@@ -35,8 +35,6 @@ class HAVLNCE():
         self.total_signals_sent = 0  # Total number of signals sent
         self.previous_human_object_ids = []  # Store object IDs to remove later
 
-        self.recomputed_navmesh = False
-
         # Initialize a lock for thread safety
         self.human_model_lock = threading.Lock()
 
@@ -80,8 +78,6 @@ class HAVLNCE():
         self.remove_previous_human_model()
         # logger.info("Previous human models removed.")
         self.frame_id = 0
-
-        self.recomputed_navmesh = False
 
 
     def _initialize_simulator_resources(self):
@@ -140,17 +136,18 @@ class HAVLNCE():
                     # self._sim.pathfinder.load_nav_mesh(os.path.join(self.nav_mesh_path, scan, scan + f'_{self.frame_id:03d}.navmesh'))
                     if not os.path.exists(os.path.join(self.nav_mesh_path, scan)):
                         os.makedirs(os.path.join(self.nav_mesh_path, scan))
-                    if not os.path.exists(os.path.join(self.nav_mesh_path, scan, scan + f'_{self.frame_id:03d}.navmesh')):
+                    navmesh_path = os.path.join(self.nav_mesh_path, scan, scan + f'_{self.frame_id:03d}.navmesh')
+                    if not os.path.exists(navmesh_path):
                         navmesh_settings = habitat_sim.nav.NavMeshSettings()
                         navmesh_settings.set_defaults()
                         navmesh_settings.agent_radius = 0.1
                         navmesh_settings.agent_height = 1.5
                         state = self._sim.recompute_navmesh(self._sim.pathfinder, navmesh_settings, include_static_objects=True)
                         assert state 
-                        state = self._sim.pathfinder.save_nav_mesh(os.path.join(self.nav_mesh_path, scan, scan + f'_{self.frame_id:03d}.navmesh'))
+                        state = self._sim.pathfinder.save_nav_mesh(navmesh_path)
                         assert state 
                     else:
-                        self._sim.pathfinder.load_nav_mesh(os.path.join(self.nav_mesh_path, scan, scan + f'_{self.frame_id:03d}.navmesh'))
+                        self._sim.pathfinder.load_nav_mesh(navmesh_path)
                     
         except Exception as e:
             logger.error(f"An error occurred while handling signals: {e}")
