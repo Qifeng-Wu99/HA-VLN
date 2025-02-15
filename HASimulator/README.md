@@ -16,7 +16,7 @@ Please change the SIMULATOR part of the vlnce task config to use human rendering
   RECOMPUTE_NAVMESH_PATH: path/to/save/load/navmesh
 ```
 
-## HA-VLN-CE Apis
+## HA-VLN-CE APIs
 Moreover, we provide some apis as following:
 
 **distance_to_human**: Calculate the distance and angle between all people and the agent according to the current position information of the agent (and the direction of the agent).
