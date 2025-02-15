@@ -34,9 +34,28 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 ## 🐍 Create Conda Environment
 Set up a Conda environment for the simulator.
 Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](https://github.com/MarSaKi/ETPNav/) (please note that we use python==3.7).
+```bash
+conda create -n havlnce python=3.7
+conda activate havlnce
+
+conda install -c aihabitat -c conda-forge habitat-sim=0.1.7 headless
+
+git clone --branch v0.1.7 git@githubcom:facebookresearch/habitat-lab.git
+cd habitat-lab
+python setup.py develop --all # install habitat and habitat_baselines
+```
 
 And follow [GroundDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
 
+```bash
+git clone https://github.com/IDEA-Research/GroundingDINO.git
+cd GroundingDINO/
+pip install -e .
+
+mkdir weights
+cd weights
+wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+```
 Finally, you should install necessary packages for Agent (please see Agent part).
 
 ---
@@ -53,7 +72,13 @@ python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_sk
 
 ## 🔄 Dataset Preprocessing
 
- 
+- data
+  - datasets
+    - HAR2R-CE
+    - HAVLN-CE_dataset
+  - ddppo-models
+  - scene_datasets
+    - mp3d
 
 ---
 
@@ -83,7 +108,7 @@ SIMULATOR:
 ## 📊 Training
 
  To train the agent of VLN-CE, you can use the script in orignal VLN-CE.
- ```
+ ```bash
  cd Agent/VLN-CE
  python run.py \
   --exp-config path/to/experiment_config.yaml \
