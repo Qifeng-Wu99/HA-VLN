@@ -24,7 +24,7 @@ from habitat_extensions import maps
 from habitat_extensions.task import RxRVLNCEDatasetV1
 
 import sys 
-sys.path.append('../..')
+sys.path.append('..')
 from HASimulator.measures import *
 
 cv2 = try_cv2_import()

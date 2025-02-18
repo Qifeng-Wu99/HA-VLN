@@ -2,9 +2,9 @@ ENVIRONMENT:
   MAX_EPISODE_STEPS: 500
 SIMULATOR:
   ADD_HUMAN: True
-  HUMAN_GLB_PATH: "/datadrive/HAVLN-CE/scripts/data_preprocess/human_motion/human_motion_glbs_v3"
-  HUMAN_INFO_PATH: "/datadrive/HAVLN-CE/scripts/motion_refine/adjust_phase4/human_motion_v9_sum_ver5.json"
-  RECOMPUTE_NAVMESH_PATH: data/datasets/recompute_navmesh
+  HUMAN_GLB_PATH: ../Data/human_motion_glbs
+  HUMAN_INFO_PATH: /datadrive/HAVLN-CE/scripts/motion_refine/adjust_phase4/human_motion_v9_sum_ver5.json
+  RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
   HUMAN_COUNTING: True
   ACTION_SPACE_CONFIG: v0
   AGENT_0:
@@ -36,7 +36,7 @@ TASK:
     DISTANCE_TO_GOAL,
     SUCCESS,
     SPL,
-    NDTW,
+    # NDTW,
     PATH_LENGTH,
     ORACLE_SUCCESS,
     STEPS_TAKEN,
@@ -49,9 +49,9 @@ TASK:
   SPL:
     SUCCESS_DISTANCE: 3.0
   NDTW:
-    GT_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}_gt.json.gz
+    GT_PATH: ../Data/HAR2R-CE/{split}/{split}_gt.json.gz
 DATASET:
   TYPE: VLN-CE-v1
   SPLIT: train
-  DATA_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}.json.gz
-  SCENES_DIR: data/scene_datasets/
+  DATA_PATH: ../Data/HAR2R-CE/{split}/{split}.json.gz
+  SCENES_DIR: ../Data/scene_datasets/

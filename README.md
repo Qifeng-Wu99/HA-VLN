@@ -26,9 +26,14 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 ---
 
 ## 🔧 Setup Environment
+```bash
+vim ~/.bashrc
 
- 
+HAVLNCE_SIMULATOR_DATA_PATH = path/to/save/your/data
 
+source ~/.bashrc
+echo $HAVLNCE_SIMULATOR_DATA_PATH
+```
 ---
 
 ## 🐍 Create Conda Environment
@@ -45,7 +50,7 @@ cd habitat-lab
 python setup.py develop --all # install habitat and habitat_baselines
 ```
 
-And follow [GroundDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
+And follow [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
 
 ```bash
 git clone https://github.com/IDEA-Research/GroundingDINO.git
@@ -65,17 +70,27 @@ Finally, you should install necessary packages for Agent (please see Agent part)
 To use the simulator, download the [Matterport3D Dataset](https://niessner.github.io/Matterport/) (access required).
 
 ```bash
-python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_mesh house_segmentations region_segmentations poisson_meshes
+python2 download_mp.py -o $HAVLNCE_SIMULATOR_DATA_PATH/dataset --type matterport_mesh house_segmentations region_segmentations poisson_meshes
 ```
 
 ---
 
 ## 🔄 Dataset Preprocessing
 
-- data
-  - datasets
-    - HAR2R-CE
-    - HAVLN-CE_dataset
+You can download dataset via the following shell.
+```bash
+wget -c -O HAPS2_0.zip "https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AKcBDbCk24N_OUYfh3k7nKI/HAPS2.0?rlkey=v88np78ugr49z3sqisnvo6a9i&subfolder_nav_tracking=1&dl=0"
+wget -c -O HAR2R-CE.zip "https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AM5yiojqqr4t_XR7FsxMXFY/HA-R2R?rlkey=gvvqy4lsusthzwt9974kkyn7s&subfolder_nav_tracking=1&dl=0"
+```
+- Data
+  - HAR2R-CE
+    - train
+    - val_seen
+    - val_unseen
+  - human_motion_glb
+    - balcony:A_child_excitedly_greeting_a_pet._0
+    - balcony:A_couple_having_a_quiet,_intimate_conversation._0
+    - ......
   - ddppo-models
   - scene_datasets
     - mp3d
@@ -84,18 +99,24 @@ python2 download_mp.py -o $HA3D_SIMULATOR_DATA_PATH/dataset --type matterport_me
 
 ## 🌆 Human-Scene Fusion
 
- 
+ We use nine cameras to observe whether there are unreasonable phenomena such as levitation and wearing molds on humans who join the scene. 
+ You need to modify the path in [here](https://github.com/F1y1113/HAVLN-CE/blob/main/HASimulator/human_scene_fusion.py).
+ ```
+data_path = "path/to/glb"
+output_path = "test/"
+json_path = "path/to/human_info"
+ ```
 
 ---
 
 ## 🖥️ Real-time Human Rendering
 
-Human Rendering is defined in the class **HAVLNCE** of HASimulator/enviorments.py.
+Human Rendering is defined in the class **HAVLNCE** of [HASimulator/enviorments.py](https://github.com/F1y1113/HAVLN-CE/blob/main/HASimulator/environments.py).
 
 Human Rendering uses child threads for timing and the main thread for adding, adding and recalculating the required navmesh in real time.
 
 
-To enable human rendering, you should follow these setting in vlnce task config.
+To enable human rendering, you should follow these setting in [vlnce task config](https://github.com/F1y1113/HAVLN-CE/blob/main/Agent/VLN-CE/habitat_extensions/config/vlnce_task.yaml).
 ```
 SIMULATOR:
   ADD_HUMAN: True
@@ -109,8 +130,8 @@ SIMULATOR:
 
  To train the agent of VLN-CE, you can use the script in orignal VLN-CE.
  ```bash
- cd Agent/VLN-CE
- python run.py \
+ cd agent
+ python run_VLNCE.py \
   --exp-config path/to/experiment_config.yaml \
   --run-type {train | eval | inference}
  ```

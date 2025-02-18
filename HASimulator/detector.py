@@ -91,7 +91,12 @@ def load_model(model_config_path, model_checkpoint_path, cpu_only=False):
 class Detector(nn.Module):
     def __init__(self):
         super().__init__()
-        self.model = load_model("path/to/cofig", "path/to/checkpoint")
+        # self.model = load_model("path/to/cofig", "path/to/checkpoint")
+        import os
+        current_path = os.path.abspath(__file__)
+        current_dir = os.path.dirname(current_path)
+        self.model = load_model(os.path.join(current_dir, "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"),
+                                 os.path.join(current_dir,"GroundingDINO/weights/groundingdino_swint_ogc.pth"))
         self.box_threshold = 0.35
         self.text_threshold = 0.25
     

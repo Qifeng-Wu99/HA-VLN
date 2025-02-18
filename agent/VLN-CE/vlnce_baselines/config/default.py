@@ -14,16 +14,16 @@ from habitat_extensions.config.default import (
 # EXPERIMENT CONFIG
 # ----------------------------------------------------------------------------
 _C = CN()
-_C.BASE_TASK_CONFIG_PATH = "habitat_extensions/config/vlnce_task.yaml"
+_C.BASE_TASK_CONFIG_PATH = "VLN-CE/habitat_extensions/config/vlnce_task.yaml"
 _C.TASK_CONFIG = CN()  # task_config will be stored as a config node
 _C.CMD_TRAILING_OPTS = []  # store command line options as list of strings
 _C.TRAINER_NAME = "dagger"
 _C.ENV_NAME = "HAVLNCEDaggerEnv"
 _C.SIMULATOR_GPU_IDS = [0]
 _C.VIDEO_OPTION = []  # options: "disk", "tensorboard"
-_C.VIDEO_DIR = "data/videos/debug"
-_C.TENSORBOARD_DIR = "data/tensorboard_dirs/debug"
-_C.RESULTS_DIR = "data/checkpoints/pretrained/evals"
+_C.VIDEO_DIR = "VLN-CE/data/videos/debug"
+_C.TENSORBOARD_DIR = "VLN-CE/data/tensorboard_dirs/debug"
+_C.RESULTS_DIR = "VLN-CE/data/checkpoints/pretrained/evals"
 
 # ----------------------------------------------------------------------------
 # EVAL CONFIG
@@ -221,13 +221,13 @@ _C.MODEL.ablate_instruction = False
 
 _C.MODEL.INSTRUCTION_ENCODER = CN()
 _C.MODEL.INSTRUCTION_ENCODER.sensor_uuid = "instruction"
-_C.MODEL.INSTRUCTION_ENCODER.vocab_size = 2504
+_C.MODEL.INSTRUCTION_ENCODER.vocab_size = 5401
 _C.MODEL.INSTRUCTION_ENCODER.use_pretrained_embeddings = True
 _C.MODEL.INSTRUCTION_ENCODER.embedding_file = (
-    "data/datasets/R2R_VLNCE_v1-3_preprocessed/embeddings.json.gz"
+    "../Data/HAR2R-CE/embeddings.json.gz"
 )
 _C.MODEL.INSTRUCTION_ENCODER.dataset_vocab = (
-    "data/datasets/R2R_VLNCE_v1-3_preprocessed/train/train.json.gz"
+    "../Data/HAR2R-CE/train/train.json.gz"
 )
 _C.MODEL.INSTRUCTION_ENCODER.fine_tune_embeddings = False
 _C.MODEL.INSTRUCTION_ENCODER.embedding_size = 50
@@ -248,7 +248,7 @@ _C.MODEL.DEPTH_ENCODER.output_size = 128
 _C.MODEL.DEPTH_ENCODER.backbone = "resnet50"
 # path to DDPPO resnet weights
 _C.MODEL.DEPTH_ENCODER.ddppo_checkpoint = (
-    "data/ddppo-models/gibson-2plus-resnet50.pth"
+    "../Data/ddppo-models/gibson-2plus-resnet50.pth"
 )
 _C.MODEL.DEPTH_ENCODER.trainable = False
 
