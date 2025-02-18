@@ -2,7 +2,7 @@
 ![License](https://img.shields.io/badge/license-MIT-blue) 
 
 * [Project Web Page](https://havln-project-website.vercel.app/)
-* [Dataset](https://www.dropbox.com/home/HA-VLN)
+* [Dataset](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=v88np78ugr49z3sqisnvo6a9i&e=1&st=xogu3trq&dl=0)
 
 <div align="center">
   <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
