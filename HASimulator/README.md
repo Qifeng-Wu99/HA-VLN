@@ -8,7 +8,7 @@
 **HA-VLN-CE** simulator incorporates dynamic human activities into photorealistic Habitat environments. The annotation process includes: 1). integrating the [HAPS 2.0 dataset](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=v88np78ugr49z3sqisnvo6a9i&st=xogu3trq&dl=0) with 172 activities and 486 detailed 3D motion models across 58,320 frames; 2). a two-stage annotation—Stage 1: coarse-to-fine using PSO algorithm and multi-view cameras, and Stage 2: human-in-the-loop for enhancing multi-human interactions and movements; 3). real-time rendering using a signaling mechanism; and 4). enabling agent-environment interactions.
 
 
-Please change the SIMULATOR part of the vlnce task config to use human rendering:
+Please change the SIMULATOR part of the [vlnce task config](https://github.com/F1y1113/HAVLN-CE/blob/main/agent/VLN-CE/habitat_extensions/config/vlnce_task.yaml) to use human rendering:
 ```
   ADD_HUMAN: True
   HUMAN_GLB_PATH: path/to/load/motion
@@ -25,7 +25,7 @@ Moreover, we provide some apis as following:
 
 **human_counting**: Count the number of humans present on the current observation.
 
-distance_to_human and collisions_detail can be turn on by adding "DISTANCE_TO_HUMAN" and "COLLISIONS_DETAIL" into MEASUREMENTS in vlnce task config.
+distance_to_human and collisions_detail can be turn on by adding "DISTANCE_TO_HUMAN" and "COLLISIONS_DETAIL" into MEASUREMENTS in [vlnce task config](https://github.com/F1y1113/HAVLN-CE/blob/main/agent/VLN-CE/habitat_extensions/config/vlnce_task.yaml).
 
 ```
   MEASUREMENTS: [
@@ -42,8 +42,8 @@ distance_to_human and collisions_detail can be turn on by adding "DISTANCE_TO_HU
   ]
 ```
 
-human_counting is based on [GroundDINO](https://github.com/IDEA-Research/GroundingDINO).
-After you install GroundDINO, you need to set correct path in detector.py.
+human_counting is based on [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO).
+After you install GroundingDINO, you need to set correct path in [detector.py](https://github.com/F1y1113/HAVLN-CE/blob/main/HASimulator/detector.py).
 
 ```python
 class Detector(nn.Module):
@@ -53,7 +53,7 @@ class Detector(nn.Module):
         self.box_threshold = 0.35
         self.text_threshold = 0.25
 ```
-human_counting can be turn on via setting SIMULATOR part of the vlnce task config.
+human_counting can be turn on via setting SIMULATOR part of the [vlnce task config](https://github.com/F1y1113/HAVLN-CE/blob/main/agent/VLN-CE/habitat_extensions/config/vlnce_task.yaml).
 ```
 HUMAN_COUNTING: True
 ```
@@ -61,4 +61,4 @@ HUMAN_COUNTING: True
 
 ## HA-VLN-CE metrics
 
-Also, the new metrics (SR, CR, and TCR) metioned in our paper are provied in metric.py.
+Also, the new metrics (SR, CR, and TCR) metioned in our paper are provied in [metric.py](https://github.com/F1y1113/HAVLN-CE/blob/main/HASimulator/metric.py).
