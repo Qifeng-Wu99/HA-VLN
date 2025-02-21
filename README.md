@@ -17,7 +17,7 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
   - [🔧 Setup Environment](#-setup-environment)
   - [🐍 Create Conda Environment](#-create-conda-environment)
   - [📥 Download Dataset](#-download-dataset)
-  - [🔄 Dataset Preprocessing](#-dataset-preprocessing)
+  - [🔄 Dataset Organization](#-dataset-organization)
   - [🌆 Human-Scene Fusion](#-human-scene-fusion)
   - [🖥️ Real-time Human Rendering](#-real-time-human-rendering)
   - [📊 Training](#-training)
@@ -73,15 +73,15 @@ To use the simulator, download the [Matterport3D Dataset](https://niessner.githu
 python2 download_mp.py -o $HAVLNCE_SIMULATOR_DATA_PATH/dataset --type matterport_mesh house_segmentations region_segmentations poisson_meshes
 ```
 
+To download and extract HA-R2R and HAPS 2.0 datasets, simply run:
+
+```bash
+bash scripts/download_data.sh
+```
 ---
 
-## 🔄 Dataset Preprocessing
+## 🔄 Dataset Organization
 
-You can download dataset via the following shell.
-```bash
-wget -c -O HAPS2_0.zip "https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AKcBDbCk24N_OUYfh3k7nKI/HAPS2.0?rlkey=v88np78ugr49z3sqisnvo6a9i&subfolder_nav_tracking=1&dl=0"
-wget -c -O HAR2R-CE.zip "https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AM5yiojqqr4t_XR7FsxMXFY/HA-R2R?rlkey=gvvqy4lsusthzwt9974kkyn7s&subfolder_nav_tracking=1&dl=0"
-```
 - Data
   - HAR2R-CE
     - train
