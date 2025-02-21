@@ -43,7 +43,7 @@ python setup.py develop --all # install habitat and habitat_baselines
 cd ..
 ```
 
-And follow [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
+And follow [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundingDINO (please note that we use supervision==0.11.1).
 
 ```bash
 cd HASimulator
@@ -56,7 +56,7 @@ cd weights
 wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 cd ../..
 ```
-Finally, you should install necessary packages for Agent (please see Agent part).
+Finally, you should install necessary packages for agent (please see [agent](https://github.com/F1y1113/HAVLN-CE/tree/main/agent)).
 
 ---
 
