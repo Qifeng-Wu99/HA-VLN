@@ -46,6 +46,7 @@ cd ..
 And follow [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
 
 ```bash
+cd HASimulator
 git clone https://github.com/IDEA-Research/GroundingDINO.git
 cd GroundingDINO/
 pip install -e .
@@ -76,6 +77,8 @@ bash scripts/download_data.sh
 
 ## 🔄 Dataset Organization
 
+Baseline models encode depth observations using a ResNet pre-trained on PointGoal navigation. Those weights can be downloaded from [here](https://github.com/facebookresearch/habitat-lab/tree/v0.1.7/habitat_baselines/rl/ddppo). Extract the contents to Data/ddppo-models/{model}.pth.
+
 - Data
   - HA-R2R
     - train
@@ -93,11 +96,11 @@ bash scripts/download_data.sh
 ## 🌆 Human-Scene Fusion
 
  We use nine cameras to observe whether there are unreasonable phenomena such as levitation and wearing molds on humans who join the scene. 
- You need to modify the path in [here](https://github.com/F1y1113/HAVLN-CE/blob/main/HASimulator/human_scene_fusion.py).
+ You need to modify the path in [here](https://github.com/F1y1113/HAVLN-CE/blob/main/scripts/human_scene_fusion.py).
  ```
-data_path = "path/to/glb"
+data_path = "../Data/HAPS2.0"
 output_path = "test/"
-json_path = "path/to/human_info"
+json_path = "../Data/human_motion.json"
  ```
 
 ---
@@ -113,9 +116,9 @@ To enable human rendering, you should follow these setting in [vlnce task config
 ```
 SIMULATOR:
   ADD_HUMAN: True
-  HUMAN_GLB_PATH: path/to/load/motion
-  HUMAN_INFO_PATH: path/to/load/human/info
-  RECOMPUTE_NAVMESH_PATH: path/to/save/navmesh
+  HUMAN_GLB_PATH: ../Data/HAPS2.0
+  HUMAN_INFO_PATH: ../Data/human_motion.json
+  RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
 ```
 ---
 

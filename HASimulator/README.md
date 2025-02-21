@@ -11,9 +11,9 @@
 Please change the SIMULATOR part of the [vlnce task config](https://github.com/F1y1113/HAVLN-CE/blob/main/agent/VLN-CE/habitat_extensions/config/vlnce_task.yaml) to use human rendering:
 ```
   ADD_HUMAN: True
-  HUMAN_GLB_PATH: path/to/load/motion
-  HUMAN_INFO_PATH: path/to/load/human/info
-  RECOMPUTE_NAVMESH_PATH: path/to/save/load/navmesh
+  HUMAN_GLB_PATH: ../Data/HAPS2.0
+  HUMAN_INFO_PATH: ../Data/human_motion.json
+  RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
 ```
 
 ## HA-VLN-CE APIs
@@ -49,7 +49,11 @@ After you install GroundingDINO, you need to set correct path in [detector.py](h
 class Detector(nn.Module):
     def __init__(self):
         super().__init__()
-        self.model = load_model("path/to/cofig", "path/to/checkpoint")
+        
+        current_path = os.path.abspath(__file__)
+        current_dir = os.path.dirname(current_path)
+        self.model = load_model(os.path.join(current_dir, "GroundingDINO/groundingdino/config/GroundingDINO_SwinT_OGC.py"),
+                                 os.path.join(current_dir,"GroundingDINO/weights/groundingdino_swint_ogc.pth"))
         self.box_threshold = 0.35
         self.text_threshold = 0.25
 ```

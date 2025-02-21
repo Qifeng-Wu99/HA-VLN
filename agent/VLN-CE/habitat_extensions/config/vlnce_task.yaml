@@ -2,8 +2,8 @@ ENVIRONMENT:
   MAX_EPISODE_STEPS: 500
 SIMULATOR:
   ADD_HUMAN: True
-  HUMAN_GLB_PATH: ../Data/human_motion_glbs
-  HUMAN_INFO_PATH: /datadrive/HAVLN-CE/scripts/motion_refine/adjust_phase4/human_motion_v9_sum_ver5.json
+  HUMAN_GLB_PATH: ../Data/HAPS2.0
+  HUMAN_INFO_PATH: ../Data/human_motion.json
   RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
   HUMAN_COUNTING: True
   ACTION_SPACE_CONFIG: v0
