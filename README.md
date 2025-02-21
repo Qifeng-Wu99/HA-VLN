@@ -14,8 +14,7 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 
 - [HA-VLN-CE](#ha-vln-ce)
   - [Table of Contents](#-table-of-contents)
-  - [🔧 Setup Environment](#-setup-environment)
-  - [🐍 Create Conda Environment](#-create-conda-environment)
+  - [🚀 Quick Start](#-quick-start)
   - [📥 Download Dataset](#-download-dataset)
   - [🔄 Dataset Organization](#-dataset-organization)
   - [🌆 Human-Scene Fusion](#-human-scene-fusion)
@@ -25,18 +24,11 @@ Vision-and-Language Navigation (VLN) is crucial for enabling robots to assist hu
 
 ---
 
-## 🔧 Setup Environment
+## 🚀 Quick Start
 ```bash
-vim ~/.bashrc
-
-HAVLNCE_SIMULATOR_DATA_PATH = path/to/save/your/data
-
-source ~/.bashrc
-echo $HAVLNCE_SIMULATOR_DATA_PATH
+git clone https://github.com/F1y1113/HAVLN-CE.git
+cd HAVLN-CE
 ```
----
-
-## 🐍 Create Conda Environment
 Set up a Conda environment for the simulator.
 Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](https://github.com/MarSaKi/ETPNav/) (please note that we use python==3.7).
 ```bash
@@ -48,6 +40,7 @@ conda install -c aihabitat -c conda-forge habitat-sim=0.1.7 headless
 git clone --branch v0.1.7 git@githubcom:facebookresearch/habitat-lab.git
 cd habitat-lab
 python setup.py develop --all # install habitat and habitat_baselines
+cd ..
 ```
 
 And follow [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundDINO (please note that we use supervision==0.11.1).
@@ -60,6 +53,7 @@ pip install -e .
 mkdir weights
 cd weights
 wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
+cd ../..
 ```
 Finally, you should install necessary packages for Agent (please see Agent part).
 
@@ -70,7 +64,7 @@ Finally, you should install necessary packages for Agent (please see Agent part)
 To use the simulator, download the [Matterport3D Dataset](https://niessner.github.io/Matterport/) (access required).
 
 ```bash
-python2 download_mp.py -o $HAVLNCE_SIMULATOR_DATA_PATH/dataset --type matterport_mesh house_segmentations region_segmentations poisson_meshes
+python2 download_mp.py -o Data/scene_datasets --type matterport_mesh house_segmentations region_segmentations poisson_meshes
 ```
 
 To download and extract HA-R2R and HAPS 2.0 datasets, simply run:
@@ -83,17 +77,16 @@ bash scripts/download_data.sh
 ## 🔄 Dataset Organization
 
 - Data
-  - HAR2R-CE
+  - HA-R2R
     - train
     - val_seen
     - val_unseen
-  - human_motion_glb
+  - HAPS2.0
     - balcony:A_child_excitedly_greeting_a_pet._0
     - balcony:A_couple_having_a_quiet,_intimate_conversation._0
     - ......
   - ddppo-models
   - scene_datasets
-    - mp3d
 
 ---
 
