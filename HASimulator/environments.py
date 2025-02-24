@@ -194,8 +194,6 @@ class HAVLNCE():
 
                 category = category.replace(" ", "_").replace("/", "_")
 
-                # template_id = self.obj_templates_mgr.load_configs('/datadrive/qih/habitat-sim/data/test_assets/objects/nested_box.object_config.json')[0]
-
                 template_id = self.obj_templates_mgr.get_template_handle_by_ID(self.or_num +
                                                 (self.category2idx[f'{category}_{glb_index}'])*120+frame_id)
 
@@ -234,8 +232,6 @@ class HAVLNCE():
     
     def __init_manager__(self):
         
-        
-        # data_path = "/datadrive/vln_share/habitat-sim/data/"
 
         self.obj_templates_mgr = self._sim.get_object_template_manager()
         
