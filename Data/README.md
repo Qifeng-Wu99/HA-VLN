@@ -1,6 +1,6 @@
 🚀🚀🚀 [**Download Here**](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=gvvqy4lsusthzwt9974kkyn7s&st=tqjr6by0&dl=0)
 
-### HAPS Dataset 2.0
+# HAPS Dataset 2.0
 
 In real-world scenarios, human motion typically adapts and interacts with the surrounding region. The proposed **Human Activity and Pose Simulation (HAPS) Dataset 2.0** improves upon [**HAPS 1.0**](https://github.com/lpercc/HA3D_simulator/) by making the following enhancements:  
 1. *Refining and diversifying human motions.*  
@@ -16,7 +16,7 @@ Each **120-frame SMPL mesh sequence** $\mathcal{H} = \langle h_1, h_2, \ldots, h
 
 [^1]: $\mathbf{H}\ = \mathbb{R}^{486 \times 120 \times(10+72+6890 \times 3)}$, representing **486 models**, each with **120 frames**, including **shape, pose, and mesh vertex parameters**.
 
-### HA-R2R Dataset
+# HA-R2R Dataset
 
 Instruction Examples Table presents four instruction examples from the **Human-Aware Room-to-Room (HA-R2R) dataset**. These cases include various scenarios such as:
 - **Multi-human interactions** (e.g., 1, 2, 3),
@@ -26,7 +26,7 @@ Instruction Examples Table presents four instruction examples from the **Human-A
 
 These examples illustrate the diversity of **human-aligned navigation instructions** that challenge the agent in our task.
 
-### Instruction Examples Table
+## Instruction Examples Table
 
 | **Instruction Example** |
 |-------------------------|
@@ -93,3 +93,38 @@ Initially, the models produced **irrelevant or subjective content** and lacked s
   }
 }
 ```
+
+# 🏃 Human Activities Annotation
+
+## 🌍 **Stage 1: Coarse Annotation**
+- **Goal:** Assign human motions to specific **regions** and **objects** using a **coarse-to-fine approach**.
+- **Process:**
+  - Filter human motions **$\mathbf{H}$** based on region **$\mathbf{R}$** and object list **$\mathbf{O}$**.
+  - Match motions **$h_i$** with objects **$j_i$** using **semantic similarity**.
+  - Optimize human placements **$\mathbf{p}_{opt}^{h_i}$** using **Particle Swarm Optimization (PSO)**.  
+- **Constraints:**
+  - Search space limited by **region boundaries**.
+  - Maintain **minimum safe distance** $\epsilon = 1m$ from other objects.
+  - Ensures **naturalistic human placements** for training navigation agents.
+
+## 🎥 **Stage 2: Fine Annotation**
+- **Inspired by:** Real-world **3D skeleton tracking** techniques.
+- **Setup:**
+  - **9 RGB cameras** surround each human model to refine **position & orientation**.
+  - **Multi-view capture** to correct **clipping issues** with surrounding objects.
+- **Camera Angles:**
+  - **8 side cameras:** $\theta_{\text{lr}}^{i} = \frac{\pi i}{8}$, alternate **up/down tilt**.
+  - **1 overhead camera:** $\theta_{\text{ud}}^{9} = \frac{\pi}{2}$.
+- **Scale:** 529 human models annotated in **374 regions** across **90 scans**.
+
+## 👥 **Multi-Human Interaction & Motion Enrichment**
+- **Goal:** Increase **scene diversity** and **human interactions**.
+- **Process:**
+  - Use **LLMs** to generate new multi-human interactions.
+  - **Manual refinement (4 rounds)** ensures consistency.
+  - Place new motions relative to objects & use **multi-camera annotation**.
+- **Result:**  
+  - **910 human models** across **428 regions**.
+  - **Complex motions**: Walking downstairs, climbing stairs.
+  - **Interaction stats:** 72 **two-human pairs**, 59 **three-human pairs**, 15 **four-human groups**.
+- **Impact:** Enables precise **social modeling** for human-aware navigation.
