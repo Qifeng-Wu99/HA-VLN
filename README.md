@@ -65,7 +65,11 @@ cd weights
 wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
 cd ../..
 ```
-Finally, you should install necessary packages for agent (please see [agent](https://github.com/F1y1113/HAVLN-CE/tree/main/agent)).
+Finally, you should install necessary packages for agent.
+
+```bash
+pip install -r requirements.txt
+```
 
 ---
 
