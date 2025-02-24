@@ -1,6 +1,6 @@
 # HA-VLN-CE Agents
 
-We adapt [VLN-CE]((https://github.com/jacobkrantz/VLN-CE/)) to our task. Please see the [link](https://github.com/jacobkrantz/VLN-CE/) for more details.
+Our agents adapt settings from [VLN-CE](https://github.com/jacobkrantz/VLN-CE/). Check the [VLN-CE](VLN-CE) for more details.
 
 
  To train the agent of VLN-CE, you can use the following scripts.
