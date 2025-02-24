@@ -4,11 +4,18 @@
 * [Project Web Page](https://havln-project-website.vercel.app/)
 * [Dataset](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=gvvqy4lsusthzwt9974kkyn7s&st=7l5drspw&dl=0)
 
+**Navigation Visualization**
+
+Navigation Demo 1|Navigation Demo 2
+--|--
+<img src="demo/gifs/nav1.gif" width="350">|<img src="demo/gifs/nav2.gif" width="350">
+**Navigation Instruction**: Start by moving forward in the lounge area, where an individual is engaged in a phone conversation while pacing back and forth. Navigate carefully to avoid crossing their path. As you proceed, you will pass by a television mounted on the wall. Continue your movement, observing people relaxing and watching the TV, some seated comfortably on sofas. Further along, notice a group of friends raising their glasses in a toast, enjoying cocktails together. Maintain a steady course, ensuring you do not disrupt their gathering. Finally, reach the end of your path where a potted plant is situated next to a door. Stop at this location, positioning yourself near the plant and door without obstructing access.|**Navigation Instruction**: Exit the room and make a left turn. Proceed down the hallway where an individual is ironing clothes, carefully smoothing out wrinkles on garments. Continue walking and make another left turn. Enter the next room, which is a bedroom. Inside, someone is comfortably seated in bed, engrossed in reading a book. Move past the bed, ensuring not to disturb the reader. Turn left again to enter the bathroom. Once inside, position yourself near the sink and wait there, observing the surroundings without interfering with any activities.
+
 <div align="center">
   <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
 </div>
 
-We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (**HA-VLN-DE**) and continuous (**HA-VLN-CE**) environments with social behaviors. The HA-VLN Simulator enables real-time rendering of human activities and provides unified environments for navigation development. It introduces the Human Activity and Pose Simulation (**HAPS**) **Dataset 2.0** with detailed 3D human motion models and the HA Room-to-Room (**HA-R2R**) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model (**HA-VLN-VL**) and a Cross-Model Attention model (**HA-VLN-CMA**) to address visual-language understanding and dynamic decision-making challenges.
+We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (**HA-VLN-DE**) and continuous (**HA-VLN-CE**) environments with social behaviors (This repo focus on CE). The [HA-VLN Simulator](HASimulator) enables real-time rendering of human activities and provides unified APIs for navigation development. It introduces the Human Activity and Pose Simulation (**HAPS**) **Dataset 2.0** with detailed 3D human motion models and the HA Room-to-Room (**HA-R2R**) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model (**HA-VLN-VL**) and a Cross-Model Attention model (**HA-VLN-CMA**) to address visual-language understanding and dynamic decision-making challenges.
 
 ## Table of Contents
 
