@@ -35,6 +35,7 @@
   - **Complex motions**: Walking downstairs, climbing stairs.
   - **Interaction stats:** 72 **two-human pairs**, 59 **three-human pairs**, 15 **four-human groups**.
 - **Impact:** Enables precise **social modeling** for human-aware navigation.
+
 **We present several annotated instances of human subjects (Overall and single), showcasing a variety of well-aligned motions, movements, and interations.** 
 
 <div align="center">
