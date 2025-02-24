@@ -192,13 +192,6 @@ In real-world scenarios, human motion typically adapts and interacts with the su
 
 HAPS 2.0 mitigates the limitations of existing human motion datasets by identifying **26 distinct regions** across **90 architectural scenes** and generating **486 human activity descriptions**, encompassing both **indoor and outdoor environments**. These descriptions, validated through **human surveys** and **quality control using ChatGPT-4**, include realistic actions and region annotations (e.g., *"workout gym exercise: An individual running on a treadmill"*).
 
-
-<div align="center">
-  <img src="demo/figs/dataset_analy.png" alt="image" width="500"/>
-</div>
-
-
-
 The [**Motion Diffusion Model (MDM)**](https://guytevet.github.io/mdm-page/) converts these descriptions into **486 detailed 3D human motion models** $\mathbf{H}$[^1] using the **SMPL model**, each transformed into a **120-frame motion sequence** $\mathcal{H}$.  
 
 Each **120-frame SMPL mesh sequence** $\mathcal{H} = \langle h_1, h_2, \ldots, h_{120} \rangle$ details **3D human motion and shape information** through the **SMPL model**.
@@ -328,6 +321,10 @@ Initially, the models produced **irrelevant or subjective content** and lacked s
   - **Complex motions**: Walking downstairs, climbing stairs.
   - **Interaction stats:** 72 **two-human pairs**, 59 **three-human pairs**, 15 **four-human groups**.
 - **Impact:** Enables precise **social modeling** for human-aware navigation.
+
+<div align="center">
+  <img src="demo/figs/dataset_analy.png" alt="image" width="500"/>
+</div>
 
 ## Contributing
 
