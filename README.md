@@ -192,6 +192,13 @@ In real-world scenarios, human motion typically adapts and interacts with the su
 
 HAPS 2.0 mitigates the limitations of existing human motion datasets by identifying **26 distinct regions** across **90 architectural scenes** and generating **486 human activity descriptions**, encompassing both **indoor and outdoor environments**. These descriptions, validated through **human surveys** and **quality control using ChatGPT-4**, include realistic actions and region annotations (e.g., *"workout gym exercise: An individual running on a treadmill"*).
 
+
+<div align="center">
+  <img src="demo/figs/dataset_analy.png" alt="image" width="500"/>
+</div>
+
+
+
 The [**Motion Diffusion Model (MDM)**](https://guytevet.github.io/mdm-page/) converts these descriptions into **486 detailed 3D human motion models** $\mathbf{H}$[^1] using the **SMPL model**, each transformed into a **120-frame motion sequence** $\mathcal{H}$.  
 
 Each **120-frame SMPL mesh sequence** $\mathcal{H} = \langle h_1, h_2, \ldots, h_{120} \rangle$ details **3D human motion and shape information** through the **SMPL model**.
@@ -209,6 +216,15 @@ Instruction Examples Table presents four instruction examples from the **Human-A
 - **No humans encountered** (e.g., 4).
 
 These examples illustrate the diversity of **human-aligned navigation instructions** that challenge the agent in our task.
+
+<div align="center">
+  <img src="demo/figs/human_group_count_vs_length.png" alt="image" width="400"/>
+</div>
+
+<div align="center">
+  <img src="instruction_length_comparison_v2.png" alt="image" width="400"/>
+</div>
+
 
 #### Instruction Examples Table
 
