@@ -222,7 +222,7 @@ These examples illustrate the diversity of **human-aligned navigation instructio
 </div>
 
 <div align="center">
-  <img src="instruction_length_comparison_v2.png" alt="image" width="400"/>
+  <img src="demo/figs/instruction_length_comparison_v2.png" alt="image" width="400"/>
 </div>
 
 
