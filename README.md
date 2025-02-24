@@ -93,24 +93,32 @@ Baseline models encode depth observations using a ResNet pre-trained on PointGoa
 
 ## 🔄 Dataset Organization
 
-- Data
-  - HA-R2R
+- **Data**
+  - **HA-R2R**
     - train
     - val_seen
     - val_unseen
-  - HAPS2.0
+  - **HAPS2.0**
     - balcony:A_child_excitedly_greeting_a_pet._0
     - balcony:A_couple_having_a_quiet,_intimate_conversation._0
     - ......
-  - ddppo-models
-  - scene_datasets
+  - **ddppo-models**
+  - **scene_datasets**
 
 ---
 
 ## 🌆 Human-Scene Fusion
 
- We use nine cameras to observe whether there are unreasonable phenomena such as levitation and wearing molds on humans who join the scene. 
- You need to modify the path in [here](https://github.com/F1y1113/HAVLN-CE/blob/main/scripts/human_scene_fusion.py).
+We use nine cameras to annotate any anomalies, such as levitation or model clipping, in humans added to the scene. Check details in [scripts/human_scene_fusion.py](https://github.com/F1y1113/HAVLN-CE/blob/main/scripts/human_scene_fusion.py).
+- **Inspired by:** Real-world **3D skeleton tracking** techniques.
+- **Setup:**
+  - **9 RGB cameras** surround each human model to refine **position & orientation**.
+  - **Multi-view capture** to correct **clipping issues** with surrounding objects.
+- **Camera Angles:**
+  - **8 side cameras:** $\theta_{\text{lr}}^{i} = \frac{\pi i}{8}$, alternate **up/down tilt**.
+  - **1 overhead camera:** $\theta_{\text{ud}}^{9} = \frac{\pi}{2}$.
+
+To use it, you need to modify the data path as
  ```
 data_path = "../Data/HAPS2.0"
 output_path = "test/"
