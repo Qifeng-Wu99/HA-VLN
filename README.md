@@ -87,7 +87,7 @@ To download and extract HA-R2R and HAPS 2.0 datasets, simply run:
 ```bash
 bash scripts/download_data.sh
 ```
-Baseline models encode depth observations using a ResNet pre-trained on PointGoal navigation. Those weights can be downloaded from [here](https://github.com/facebookresearch/habitat-lab/tree/v0.1.7/habitat_baselines/rl/ddppo). Extract the contents to Data/ddppo-models/{model}.pth.
+Baseline models encode depth observations using a ResNet pre-trained on PointGoal navigation. Those weights can be downloaded from [here](https://github.com/facebookresearch/habitat-lab/tree/v0.1.7/habitat_baselines/rl/ddppo). Extract the contents to [Data/ddppo-models](Data/ddppo-models)/{model}.pth.
 
 ---
 
