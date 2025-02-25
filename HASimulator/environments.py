@@ -231,7 +231,6 @@ class HAVLNCE():
             # self.recomputed_navmesh = True
     
     def __init_manager__(self):
-        
 
         self.obj_templates_mgr = self._sim.get_object_template_manager()
         

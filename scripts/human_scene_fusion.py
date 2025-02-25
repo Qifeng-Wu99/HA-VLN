@@ -284,7 +284,6 @@ if __name__ == "__main__":
     with multiprocessing.Pool(processes=8) as pool:  
 
         process_scan_partial = partial(process,
-                                       viewpoints=human_motion_data)  
-        # 映射任务到多进程池  
+                                       viewpoints=human_motion_data)   
         scans = list(human_motion_data.keys())
         pool.map(process_scan_partial, scans)
