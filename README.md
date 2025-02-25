@@ -151,6 +151,7 @@ SIMULATOR:
 To implement the HA-VLN-CMA agent, you can use the following script:
 
 ```bash
+cd agent
 # Training
 python run.py --exp-config config/HAVLNCE_task.yaml --run-type train
 
