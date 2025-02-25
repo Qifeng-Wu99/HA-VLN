@@ -148,7 +148,7 @@ SIMULATOR:
 
 ## 📊 Training
 
- To train the agent of VLN-CE, you can use the script in orignal VLN-CE.
+ To train the agent,
  ```bash
  cd agent
  python run_VLNCE.py \
