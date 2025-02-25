@@ -109,7 +109,7 @@ Baseline models encode depth observations using a ResNet pre-trained on PointGoa
 
 ## 🌆 Human-Scene Fusion
 
-We use nine cameras to annotate any anomalies, such as levitation or model clipping, in humans added to the scene. Check details in [scripts/human_scene_fusion.py](https://github.com/F1y1113/HAVLN-CE/blob/main/scripts/human_scene_fusion.py).
+We use nine cameras to annotate any anomalies, such as levitation or model clipping, in humans added to the scene. Check details in [scripts/human_scene_fusion.py](scripts/human_scene_fusion.py).
 - **Inspired by:** Real-world **3D skeleton tracking** techniques.
 - **Setup:**
   - **9 RGB cameras** surround each human model to refine **position & orientation**.
@@ -129,12 +129,12 @@ json_path = "../Data/human_motion.json"
 
 ## 🖥️ Real-time Human Rendering
 
-Human Rendering is defined in the class **HAVLNCE** of [HASimulator/enviorments.py](https://github.com/F1y1113/HAVLN-CE/blob/main/HASimulator/environments.py).
+Human Rendering is defined in the class **HAVLNCE** of [HASimulator/enviorments.py](HASimulator/environments.py).
 
 Human Rendering uses child threads for timing and the main thread for adding, adding and recalculating the required navmesh in real time.
 
 
-To enable human rendering, you should follow these setting in [HA-VLN task config](agent/VLN-CE/habitat_extensions/config/vlnce_task.yaml).
+To enable human rendering, you should follow these setting in [HA-VLN task config](agent/config/HAVLNCE_task.yaml).
 
 In the first use, the navmesh will be automatically calculated and saved to support operations such as collision calculation, and the subsequent use will directly load the previously generated navmesh.
 ```
