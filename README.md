@@ -131,12 +131,10 @@ json_path = "../Data/human_motion.json"
 
 Human Rendering is defined in the class **HAVLNCE** of [HASimulator/enviorments.py](HASimulator/environments.py).
 
-Human Rendering uses child threads for timing and the main thread for adding, adding and recalculating the required navmesh in real time.
+Human Rendering uses child threads for timing and the main thread for adding / removing human models and recalculating the required navmesh in real time.
 
+In the first use, the navmesh will be automatically calculated and saved to support operations such as collision calculation, and the subsequent use will directly load the previously generated navmesh. To enable human rendering, you should follow settings in [HA-VLN task config](agent/config/HAVLNCE_task.yaml).
 
-To enable human rendering, you should follow these setting in [HA-VLN task config](agent/config/HAVLNCE_task.yaml).
-
-In the first use, the navmesh will be automatically calculated and saved to support operations such as collision calculation, and the subsequent use will directly load the previously generated navmesh.
 ```
 SIMULATOR:
   ADD_HUMAN: True
