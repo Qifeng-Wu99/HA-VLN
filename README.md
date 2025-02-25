@@ -148,10 +148,10 @@ SIMULATOR:
 
 ## 📊 Training
 
- To train the agent,
+ To train the HA-VLN-CMA agent,
  ```bash
  cd agent
- python run_VLNCE.py \
+ python run.py \
   --exp-config path/to/experiment_config.yaml \
   --run-type {train | eval | inference}
  ```
