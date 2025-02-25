@@ -50,7 +50,7 @@ conda install -c aihabitat -c conda-forge habitat-sim=0.1.7 headless
 git clone --branch v0.1.7 git@githubcom:facebookresearch/habitat-lab.git
 cd habitat-lab
 python setup.py develop --all # install habitat and habitat_baselines
-cd ..
+cd $(git rev-parse --show-toplevel)
 ```
 
 And follow [GroundingDINO](https://github.com/IDEA-Research/GroundingDINO/) to install GroundingDINO (please note that we use supervision==0.11.1).
@@ -64,7 +64,7 @@ pip install -e .
 mkdir weights
 cd weights
 wget -q https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha/groundingdino_swint_ogc.pth
-cd ../..
+cd $(git rev-parse --show-toplevel)
 ```
 Finally, you should install necessary packages for agent.
 
