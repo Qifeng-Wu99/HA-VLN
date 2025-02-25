@@ -3,12 +3,18 @@
 Our agents adapt settings from [VLN-CE](https://github.com/jacobkrantz/VLN-CE/). Check the [VLN-CE](VLN-CE) for more details.
 
 
- To train the HA-VLN-CMA agent, you can use the following scripts.
- ```bash
- python run.py \
-  --exp-config path/to/experiment_config.yaml \
-  --run-type {train | eval | inference}
- ```
+To implement the HA-VLN-CMA agent, you can use the following script:
+
+```bash
+# Training
+python run.py --exp-config config/HAVLNCE_task.yaml --run-type train
+
+# Evaluation
+python run.py --exp-config config/HAVLNCE_task.yaml --run-type eval
+
+# Inference
+python run.py --exp-config config/HAVLNCE_task.yaml --run-type inference
+```
 
 ### HA-VLN-VL Agent
 

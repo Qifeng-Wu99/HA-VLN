@@ -1,6 +1,11 @@
 ENVIRONMENT:
   MAX_EPISODE_STEPS: 500
 SIMULATOR:
+  ADD_HUMAN: True
+  HUMAN_GLB_PATH: ../Data/HAPS2.0
+  HUMAN_INFO_PATH: ../Data/human_motion.json
+  RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
+  HUMAN_COUNTING: True
   ACTION_SPACE_CONFIG: v0
   AGENT_0:
     SENSORS: [RGB_SENSOR, DEPTH_SENSOR]
@@ -31,19 +36,22 @@ TASK:
     DISTANCE_TO_GOAL,
     SUCCESS,
     SPL,
-    NDTW,
+    # NDTW,
     PATH_LENGTH,
     ORACLE_SUCCESS,
-    STEPS_TAKEN
+    STEPS_TAKEN,
+    COLLISIONS,
+    COLLISIONS_DETAIL,
+    DISTANCE_TO_HUMAN
   ]
   SUCCESS:
     SUCCESS_DISTANCE: 3.0
   SPL:
     SUCCESS_DISTANCE: 3.0
   NDTW:
-    GT_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}_gt.json.gz
+    GT_PATH: ../Data/HAR2R-CE/{split}/{split}_gt.json.gz
 DATASET:
   TYPE: VLN-CE-v1
   SPLIT: train
-  DATA_PATH: data/datasets/R2R_VLNCE_v1-3_preprocessed/{split}/{split}.json.gz
-  SCENES_DIR: data/scene_datasets/
+  DATA_PATH: ../Data/HAR2R-CE/{split}/{split}.json.gz
+  SCENES_DIR: ../Data/scene_datasets/
