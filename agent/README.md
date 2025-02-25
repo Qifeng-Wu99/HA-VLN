@@ -1,6 +1,6 @@
 # HA-VLN-CE Agents
 
-Our agents adapt settings from [VLN-CE](https://github.com/jacobkrantz/VLN-CE/). Check the [VLN-CE](VLN-CE) for more details.
+Our agents adapt settings and codes from [VLN-CE](https://github.com/jacobkrantz/VLN-CE/). Check the [VLN-CE](VLN-CE) for more details.
 
 
 To implement the HA-VLN-CMA agent, you can use the following script:
