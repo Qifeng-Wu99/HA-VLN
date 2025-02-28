@@ -206,7 +206,7 @@ Each **120-frame SMPL mesh sequence** $\mathcal{H} = \langle h_1, h_2, \ldots, h
 
 ---
 
-[^1]: $\mathbf{H}\ = \mathbb{R}^{486 \times 120 \times(10+72+6890 \times 3)}$, representing **486 models**, each with **120 frames**, including **shape, pose, and mesh vertex parameters**.
+[^1]: **H** = **R**<sup>486 × 120 × (10 + 72 + 6890 × 3)</sup>, representing **486 models**, each with **120 frames**, including **shape, pose, and mesh vertex parameters**.
 
 ### HA-R2R Dataset
 
@@ -336,7 +336,7 @@ Initially, the models produced **irrelevant or subjective content** and lacked s
 
 ## Contributing
 
-We welcome contributions to this project! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines on how to contribute.
+We welcome contributions to this project! Please contact yd2616@columbia.edu or wufengyi98@gmail.com.
 
 ## License
 
