@@ -135,7 +135,7 @@ Human Rendering is defined in the class **HAVLNCE** of [HASimulator/enviorments.
 
 Human Rendering uses child threads for timing and the main thread for adding / removing human models and recalculating the required navmesh in real time.
 
-In the first use, the navmesh will be automatically calculated and saved to support operations such as collision calculation, and the subsequent use will directly load the previously generated navmesh. To enable human rendering, modify the following settings in [HA-VLN task config](agent/config/HAVLNCE_task.yaml):
+In the first use, the navmesh will be automatically calculated and saved to support operations such as collision calculation, and the subsequent use will directly load the previously generated navmesh. To enable human rendering, modify the following settings in [HAVLN-CE task config](HASimulator/config/HAVLNCE_task.yaml):
 
 ```
 SIMULATOR:
