@@ -151,13 +151,13 @@ To implement the HA-VLN-CMA agent, you can use the following script:
 ```bash
 cd agent
 # Training
-python run.py --exp-config config/HAVLNCE_task.yaml --run-type train
+python run.py --exp-config config/cma_pm_da_aug_tune.yaml --run-type train
 
 # Evaluation
-python run.py --exp-config config/HAVLNCE_task.yaml --run-type eval
+python run.py --exp-config config/cma_pm_da_aug_tune.yaml --run-type eval
 
 # Inference
-python run.py --exp-config config/HAVLNCE_task.yaml --run-type inference
+python run.py --exp-config config/cma_pm_da_aug_tune.yaml --run-type inference
 ```
 
 ## 📈 Visualization
