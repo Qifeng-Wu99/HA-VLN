@@ -116,20 +116,14 @@ class HAVLNCE():
                 signal = self.signal_queue.get_nowait()
                 signals_processed += 1
                 # No need to process the signal content, we just count them
-            # if signals_processed > 0:
-            #     # Calculate frame ID based on total signals sent
-            #     frame_id = (self.total_signals_sent - 1) % 120
-            #     logger.info(f"Processing {signals_processed} signals. Using frame {frame_id}")
-            #     self.refresh_human_model(frame_id)
+
             if signals_processed > 0:
                 # Calculate frame ID based on total signals sent
                 frame_id = (self.total_signals_sent - 1) % 120
                 
                 if self.total_signals_sent <= 120:
                     # logger.info(f"Processing {signals_processed} signals. Using frame {frame_id}")
-                    # if not self.recomputed_navmesh:
-                    #     self.refresh_human_model(frame_id)
-                    #     self.frame_id = frame_id
+
                     self.refresh_human_model(frame_id)
                     self.frame_id = frame_id
                     scan = self._sim._current_scene.split('/')[-2]
@@ -204,15 +198,12 @@ class HAVLNCE():
                         mn.Quaternion.rotation(mn.Deg(rotation_euler[1]), mn.Vector3(0.0, 1.0, 0.0)) *
                         mn.Quaternion.rotation(mn.Deg(rotation_euler[2]), mn.Vector3(0.0, 0.0, 1.0))
                     )
-                    # object_id = self._sim.add_object(template_id)
                     object_id = self._sim.add_object_by_handle(template_id)
-                    # logger.info(f"Added object with ID {object_id}")
 
                     self._sim.set_translation(translations, object_id)
                     self._sim.set_rotation(rotation_quat, object_id)
                     rotation_quat = self._sim.get_rotation(object_id)
                     human_positions[viewpoint] = (np.array(translation), rotation_euler)
-                    # print(rotation_euler, rotation_quat, rotation_quat.to_matrix())
 
                     self._sim.set_object_motion_type(habitat_sim.physics.MotionType.STATIC, object_id)
 
@@ -220,15 +211,6 @@ class HAVLNCE():
                     self.previous_human_object_ids.append(object_id)
             
             self._sim._human_posisions = human_positions
-            # num_objects = len(self.previous_human_object_ids)
-            # logger.info(f"Added {num_objects} objects")
-
-            # navmesh_settings = habitat_sim.nav.NavMeshSettings()
-            # navmesh_settings.set_defaults()
-            # navmesh_settings.agent_radius = 0.1
-            # navmesh_settings.agent_height = 1.5
-            # self._sim.recompute_navmesh(self._sim.pathfinder, navmesh_settings, include_static_objects=True)
-            # self.recomputed_navmesh = True
     
     def __init_manager__(self):
 
@@ -240,10 +222,12 @@ class HAVLNCE():
         self.or_num = pre_num
 
         glb_lists = sorted(os.listdir(self.data_path))
+        glb_lists = [f for f in glb_lists if os.path.isdir(os.path.join(self.data_path, f))]
+
         for i, category in enumerate(glb_lists):
             idx2category[i] = category
             self.category2idx[category] = i
-            self.obj_templates_mgr.load_configs(str(f"{self.data_path}/{category}/"))
+            self.obj_templates_mgr.load_configs(os.path.join(self.data_path, category))
             add_num = self.obj_templates_mgr.get_num_templates() - pre_num
             assert add_num == 120
             pre_num = self.obj_templates_mgr.get_num_templates()
