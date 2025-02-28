@@ -3,7 +3,7 @@ ENVIRONMENT:
 SIMULATOR:
   ADD_HUMAN: True
   HUMAN_GLB_PATH: ../Data/HAPS2.0
-  HUMAN_INFO_PATH: ../Data/human_motion.json
+  HUMAN_INFO_PATH: ../Data/Multi-Human-Annotations/human_motion.json
   RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
   HUMAN_COUNTING: True
   ACTION_SPACE_CONFIG: v0

@@ -102,6 +102,8 @@ Baseline models encode depth observations using a ResNet pre-trained on PointGoa
     - balcony:A_child_excitedly_greeting_a_pet._0
     - balcony:A_couple_having_a_quiet,_intimate_conversation._0
     - ......
+  - **Multi-Human-Annotations**
+    - human_motion.json
   - **ddppo-models**
   - **scene_datasets**
 
@@ -122,7 +124,7 @@ To use it, you need to modify the data path as
  ```
 data_path = "../Data/HAPS2.0"
 output_path = "test/"
-json_path = "../Data/human_motion.json"
+json_path = "../Data/Multi-Human-Annotations/human_motion.json"
  ```
 
 ---
@@ -139,7 +141,7 @@ In the first use, the navmesh will be automatically calculated and saved to supp
 SIMULATOR:
   ADD_HUMAN: True
   HUMAN_GLB_PATH: ../Data/HAPS2.0
-  HUMAN_INFO_PATH: ../Data/human_motion.json
+  HUMAN_INFO_PATH: ../Data/Multi-Human-Annotations/human_motion.json
   RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
 ```
 ---
