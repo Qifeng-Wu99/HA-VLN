@@ -104,6 +104,7 @@ Baseline models encode depth observations using a ResNet pre-trained on PointGoa
     - ......
   - **Multi-Human-Annotations**
     - human_motion.json
+  - **HA-R2R-tools**
   - **ddppo-models**
   - **scene_datasets**
 
