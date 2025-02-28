@@ -336,7 +336,7 @@ Initially, the models produced **irrelevant or subjective content** and lacked s
 
 ## Contributing
 
-We welcome contributions to this project! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for detailed guidelines on how to contribute.
+We welcome contributions to this project! Please contact yd2616@columbia.edu or wufengyi98@gmail.com.
 
 ## License
 
