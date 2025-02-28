@@ -1,5 +1,5 @@
 # Human-Aware Vision-and-Language Nagivation (HA-VLN)
-![License](https://img.shields.io/badge/license-MIT-blue) 
+![License](LICENSE) 
 
 * 🚀 [Project Web Page](https://havln-project-website.vercel.app/)
 * 📂 [Dataset](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=gvvqy4lsusthzwt9974kkyn7s&st=7l5drspw&dl=0)
