@@ -224,10 +224,10 @@ _C.MODEL.INSTRUCTION_ENCODER.sensor_uuid = "instruction"
 _C.MODEL.INSTRUCTION_ENCODER.vocab_size = 5401
 _C.MODEL.INSTRUCTION_ENCODER.use_pretrained_embeddings = True
 _C.MODEL.INSTRUCTION_ENCODER.embedding_file = (
-    "../Data/HAR2R-CE/embeddings.json.gz"
+    "../Data/HA-R2R-tools/embeddings.json.gz"
 )
 _C.MODEL.INSTRUCTION_ENCODER.dataset_vocab = (
-    "../Data/HAR2R-CE/train/train.json.gz"
+    "../Data/HA-R2R/train/train.json.gz"
 )
 _C.MODEL.INSTRUCTION_ENCODER.fine_tune_embeddings = False
 _C.MODEL.INSTRUCTION_ENCODER.embedding_size = 50

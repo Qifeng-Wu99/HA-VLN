@@ -7,7 +7,7 @@ class Calculate_Metric():
         current_dir = os.path.dirname(current_path)
         parent_dir_path = os.path.abspath(os.path.join(current_dir, os.path.pardir))
 
-        with open(os.path.join(parent_dir_path, f'Data/HAR2R-CE/collision_num_{split}.json')) as f:
+        with open(os.path.join(parent_dir_path, f'Data/HA-R2R-tools/collision_num_{split}.json')) as f:
             self.num_collisions = json.load(f)
         self.beta = {'train':1.0 - 1615.0/10819, 'val_seen':1.0 - 96.0/778, 'val_unseen':1.0 - 246.0/1839, 'test':1.0 - 549.0/3408}
 
