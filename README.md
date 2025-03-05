@@ -21,7 +21,7 @@ We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VL
 
 ## Table of Contents
 
-- [HA-VLN-CE](#ha-vln-ce)
+- [HA-VLN](#ha-vln)
   - [Table of Contents](#-table-of-contents)
   - [🚀 Quick Start](#-quick-start)
   - [📥 Download Dataset](#-download-dataset)
