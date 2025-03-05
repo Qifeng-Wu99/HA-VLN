@@ -19,9 +19,9 @@ if "google.colab" in sys.modules:
 
 
 repo = git.Repo(".", search_parent_directories=True)
-data_path = "../Data/HAPS2.0"
+data_path = "../Data"
 output_path = "test/"
-json_path = "../Data/human_motion.json"
+json_path = "../Data/Multi-Human-Annotations/human_motion.json"
 
 def remove_all_objects(sim):
     for id_ in sim.get_existing_object_ids():
@@ -40,6 +40,7 @@ def make_configuration(scene_id):
     backend_cfg = habitat_sim.SimulatorConfiguration()
     backend_cfg.gpu_device_id = 0
     backend_cfg.scene_id = scene_id
+    print(backend_cfg.scene_id)
     assert os.path.exists(backend_cfg.scene_id)
     backend_cfg.enable_physics = True
 
@@ -150,7 +151,7 @@ def process(scan, viewpoints):
         
         object_template_ids = []
         obj_templates_mgr = sim.get_object_template_manager()
-        glb_folder_path = os.path.join(f"{data_path}/human_motion_glbs/{category}/{index}_glb/")   
+        glb_folder_path = os.path.join(f"{data_path}/HAPS2.0/{category}_{index}/")   
         glb_files = load_glb_files(glb_folder_path)
         for glb_file in glb_files:
             template_id = obj_templates_mgr.load_configs(glb_file)[0]
