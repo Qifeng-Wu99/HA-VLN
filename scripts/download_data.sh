@@ -17,18 +17,21 @@ download_and_extract() {
     fi
 
     echo "Extracting $output_file ..."
-    unzip -q -o "$output_file" -d "$DATASET_DIR"
+    unzip -q -o "$output_file" -d "$extract_dir"
 
     rm -f "$output_file"
     echo "Deleted: $output_file after extraction."
 }
 
 # Download HAPS 2.0 dataset
-download_and_extract "https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AKcBDbCk24N_OUYfh3k7nKI/HAPS2.0?rlkey=v88np78ugr49z3sqisnvo6a9i&subfolder_nav_tracking=1&dl=0" \
-                     "HAPS2_0.zip" "HAPS2.0"
+download_and_extract "https://www.dropbox.com/scl/fo/gzcypr68u881og71mvi1f/AKlI9hNHFWGVtgAIONKskgs?rlkey=489p8tcitj5bdlppooobwomik&st=mbn0km5n&dl=1" \
+                     "HAPS2_0.zip" "HAPS2_0"
+
+mv Data/HAPS2_0/human_motion_glbs_v3/* Data/HAPS2_0/
+rmdir Data/HAPS2_0/human_motion_glbs_v3
 
 # Download HA-R2R-CE dataset
-download_and_extract "https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AM5yiojqqr4t_XR7FsxMXFY/HA-R2R?rlkey=gvvqy4lsusthzwt9974kkyn7s&subfolder_nav_tracking=1&dl=0" \
+download_and_extract "https://www.dropbox.com/scl/fo/v68xl2hyt8nrosw8movot/ABE35iCkVU5j6YIZW2utY1w?rlkey=05bw6r6v4xw9bxq4r5mz4zc7p&st=x25cu3bu&dl=1" \
                      "HAR2R-CE.zip" "HA-R2R"
 
 echo "🎉 All datasets have been ready!"

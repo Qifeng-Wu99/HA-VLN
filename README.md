@@ -17,7 +17,7 @@ Navigation Demo 1|Navigation Demo 2
   <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
 </div>
 
-We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (**HA-VLN-DE**) and continuous (**HA-VLN-CE**) environments with social behaviors (This repo focus on CE). The [HA-VLN Simulator](HASimulator) enables real-time rendering of human activities and provides unified APIs for navigation development. It introduces the Human Activity and Pose Simulation ([**HAPS 2.0 Dataset**](Data/HAPS2.0)) with detailed 3D human motion models and the HA Room-to-Room ([**HA-R2R**](Data/HA-R2R)) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model ([**HA-VLN-VL**](agent)) and a Cross-Model Attention model ([**HA-VLN-CMA**](agent)) to address visual-language understanding and dynamic decision-making challenges.
+We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (**HA-VLN-DE**) and continuous (**HA-VLN-CE**) environments with social behaviors (This repo focus on CE). The [HA-VLN Simulator](HASimulator) enables real-time rendering of human activities and provides unified APIs for navigation development. It introduces the Human Activity and Pose Simulation ([**HAPS 2.0 Dataset**](Data/HAPS2_0)) with detailed 3D human motion models and the HA Room-to-Room ([**HA-R2R**](Data/HA-R2R)) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model ([**HA-VLN-VL**](agent)) and a Cross-Model Attention model ([**HA-VLN-CMA**](agent)) to address visual-language understanding and dynamic decision-making challenges.
 
 ## Table of Contents
 
@@ -98,7 +98,7 @@ Baseline models encode depth observations using a ResNet pre-trained on PointGoa
     - train
     - val_seen
     - val_unseen
-  - **HAPS2.0**
+  - **HAPS2_0**
     - balcony:A_child_excitedly_greeting_a_pet._0
     - balcony:A_couple_having_a_quiet,_intimate_conversation._0
     - ......
@@ -123,7 +123,7 @@ We use nine cameras to annotate any anomalies, such as levitation or model clipp
 
 To use it, you need to modify the data path as
  ```
-data_path = "../Data/HAPS2.0"
+data_path = "../Data/HAPS2_0"
 output_path = "test/"
 json_path = "../Data/Multi-Human-Annotations/human_motion.json"
  ```
@@ -141,7 +141,7 @@ In the first use, the navmesh will be automatically calculated and saved to supp
 ```
 SIMULATOR:
   ADD_HUMAN: True
-  HUMAN_GLB_PATH: ../Data/HAPS2.0
+  HUMAN_GLB_PATH: ../Data/HAPS2_0
   HUMAN_INFO_PATH: ../Data/Multi-Human-Annotations/human_motion.json
   RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
 ```

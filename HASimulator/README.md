@@ -11,7 +11,7 @@
 Please change the SIMULATOR part of the [HAVLN-CE task config](config/HAVLNCE_task.yaml) to use human rendering:
 ```
   ADD_HUMAN: True
-  HUMAN_GLB_PATH: ../Data/HAPS2.0
+  HUMAN_GLB_PATH: ../Data/HAPS2_0
   HUMAN_INFO_PATH: ../Data/human_motion.json
   RECOMPUTE_NAVMESH_PATH: ../Data/recompute_navmesh
 ```
