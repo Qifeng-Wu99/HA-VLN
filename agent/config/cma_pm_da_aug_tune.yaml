@@ -16,7 +16,7 @@ EVAL:
 INFERENCE:
   USE_CKPT_CONFIG: False
   CKPT_PATH: VLN-CE/data/checkpoints/cma_pm_da_aug_tune/CMA_PM_DA_Aug.pth
-  SPLIT: val_unseen
+  SPLIT: test
   FORMAT: r2r
   INFERENCE_NONLEARNING: False
 
