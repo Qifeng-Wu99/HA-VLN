@@ -506,7 +506,7 @@ class BaseVLNCETrainer(BaseILTrainer):
         config.TASK_CONFIG.TASK.SENSORS = [
             s for s in config.TASK_CONFIG.TASK.SENSORS if "INSTRUCTION" in s
         ]
-        config.ENV_NAME = "VLNCEInferenceEnv"
+        config.ENV_NAME = "HAVLNCEInferenceEnv"
         config.freeze()
 
         envs = construct_envs_auto_reset_false(

@@ -101,6 +101,34 @@ class VLNCEInferenceEnv(habitat.RLEnv):
             "stop": self._env.task.is_stop_called,
         }
 
+@baseline_registry.register_env(name="HAVLNCEInferenceEnv")
+class HAVLNCEInferenceEnv(VLNCEInferenceEnv):
+    def __init__(self, config: Config, dataset: Optional[Dataset] = None):
+        super().__init__(config, dataset)
+        if config.TASK_CONFIG.SIMULATOR.ADD_HUMAN:
+            # Initialize simulator resources
+            self.havlnce_tool = HAVLNCE(config.TASK_CONFIG, self._env._sim)
+
+    def reset(self) -> Observations:
+        r"""Resets the environments and returns the initial observations.
+
+        :return: initial observations from the environment.
+        """
+        if self._env._config.SIMULATOR.ADD_HUMAN:
+            self.havlnce_tool.reset()
+
+        observations = super().reset()
+
+        return observations
+    
+    def step(
+        self, action: Union[int, str, Dict[str, Any]], **kwargs
+    ) -> Observations:
+        if self._env._config.SIMULATOR.ADD_HUMAN:
+            self.havlnce_tool._handle_signals()
+        observations = super().step(action, **kwargs)
+
+        return observations
 
 @baseline_registry.register_env(name="VLNCEWaypointEnv")
 class VLNCEWaypointEnv(habitat.RLEnv):
