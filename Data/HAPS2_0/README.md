@@ -1,6 +1,6 @@
 ### HAPS Dataset 2.0
 
-🚀🚀🚀 [**Download Here**](https://www.dropbox.com/scl/fo/gzcypr68u881og71mvi1f/AKlI9hNHFWGVtgAIONKskgs?rlkey=489p8tcitj5bdlppooobwomik&st=0159h12d&dl=0)
+🚀🚀🚀 [**Download Here**](https://drive.google.com/drive/folders/1y40El1gDpvBbooFRBbhMCQSPbcDNebHR?usp=sharing)
 
 In real-world scenarios, human motion typically adapts and interacts with the surrounding region. The proposed **Human Activity and Pose Simulation (HAPS) Dataset 2.0** improves upon [**HAPS 1.0**](https://github.com/lpercc/HA3D_simulator/) by making the following enhancements:  
 1. *Refining and diversifying human motions.*  
