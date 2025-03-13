@@ -1,8 +1,8 @@
 # Human-Aware Vision-and-Language Nagivation (HA-VLN)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
-* 🚀 [Project Web Page](https://havln-project-website.vercel.app/)
-* 📂 [Dataset](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=gvvqy4lsusthzwt9974kkyn7s&st=7l5drspw&dl=0)
+* 🚀 [Project Web Page](https://ha-vln-project.vercel.app/)
+* 📂 [Dataset](https://drive.google.com/drive/folders/1WrdsRSPp-xJkImZ3CnI7Ho90lnhzp5GR?usp=sharing)
 
 ## 🧭 What does HA-VLN look like?
 
@@ -191,7 +191,7 @@ Demo 4|Demo 5|Demo 6
 
 ## 📂 Dataset Details
 
-🚀🚀🚀 [**Download Here**](https://www.dropbox.com/scl/fo/6ofhh9vw5h21is38ahhgc/AOutW4EK3higqNOrX2hQ8rk?rlkey=gvvqy4lsusthzwt9974kkyn7s&st=tqjr6by0&dl=0)
+🚀🚀🚀 [**Download Here**](https://drive.google.com/drive/folders/1WrdsRSPp-xJkImZ3CnI7Ho90lnhzp5GR?usp=sharing)
 
 ### HAPS Dataset 2.0
 
