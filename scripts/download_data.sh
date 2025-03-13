@@ -1,37 +1,53 @@
 #!/bin/bash
 
+# Ensure gdown is installed
+if ! command -v gdown &> /dev/null; then
+    echo "gdown is not installed. Installing..."
+    pip install gdown
+fi
+
 # Set the dataset download directory
 DATASET_DIR="Data"
 mkdir -p $DATASET_DIR
 
+# Function to download and extract a ZIP file
 download_and_extract() {
-    local url=$1
+    local file_id=$1
     local output_file="$DATASET_DIR/$2"
     local extract_dir="$DATASET_DIR/$3"
 
     if [ -f "$output_file" ]; then
         echo "File already exists: $output_file, skipping download."
     else
-        echo "Downloading $output_file ..."
-        wget -c -O "$output_file" "$url"
+        echo "Downloading $output_file from Google Drive..."
+        gdown "https://drive.google.com/uc?id=$file_id" -O "$output_file"
     fi
 
-    echo "Extracting $output_file ..."
+    # Check if the file was downloaded successfully
+    if [ ! -f "$output_file" ]; then
+        echo "Download failed: $output_file"
+        exit 1
+    fi
+
+    echo "Extracting $output_file to $extract_dir ..."
+    mkdir -p "$extract_dir"
     unzip -q -o "$output_file" -d "$extract_dir"
 
+    # Remove the ZIP file after extraction
     rm -f "$output_file"
     echo "Deleted: $output_file after extraction."
 }
 
-# Download HAPS 2.0 dataset
-download_and_extract "https://www.dropbox.com/scl/fo/gzcypr68u881og71mvi1f/AKlI9hNHFWGVtgAIONKskgs?rlkey=489p8tcitj5bdlppooobwomik&st=mbn0km5n&dl=1" \
-                     "HAPS2_0.zip" "HAPS2_0"
+HAPS2_0_ID="1gNdA4_mDAhW6g6Yedq2ypOR1N1sFpARB"
+HAR2R_CE_ID="1_-5StHsRP6REKrANMxKIscPtEP7sx-q0"
+
+# Download and extract HAPS 2.0 dataset
+download_and_extract "$HAPS2_0_ID" "HAPS2_0.zip" "HAPS2_0"
 
 mv Data/HAPS2_0/human_motion_glbs_v3/* Data/HAPS2_0/
 rmdir Data/HAPS2_0/human_motion_glbs_v3
 
-# Download HA-R2R-CE dataset
-download_and_extract "https://www.dropbox.com/scl/fo/v68xl2hyt8nrosw8movot/ABE35iCkVU5j6YIZW2utY1w?rlkey=05bw6r6v4xw9bxq4r5mz4zc7p&st=x25cu3bu&dl=1" \
-                     "HAR2R-CE.zip" "HA-R2R"
+# Download and extract HA-R2R-CE dataset
+download_and_extract "$HAR2R_CE_ID" "HAR2R-CE.zip" "HA-R2R"
 
-echo "🎉 All datasets have been ready!"
+echo "🎉 All datasets are ready!"
