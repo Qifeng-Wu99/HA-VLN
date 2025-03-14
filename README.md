@@ -99,7 +99,7 @@ To use the simulator, download the [Matterport3D Dataset](https://niessner.githu
 python2 download_mp.py -o Data/scene_datasets --type matterport_mesh house_segmentations region_segmentations poisson_meshes
 ```
 
-To download and extract HA-R2R and HAPS 2.0 datasets, simply run:
+To download and extract HA-R2R and HAPS 2.0 datasets, simply run (gdown required):
 
 ```bash
 bash scripts/download_data.sh
