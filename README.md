@@ -1,4 +1,5 @@
 # Human-Aware Vision-and-Language Nagivation (HA-VLN)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.14229-red)](https://arxiv.org/abs/2503.14229) 
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
 * 🚀 [Project Web Page](https://ha-vln-project.vercel.app/)
@@ -355,6 +356,22 @@ Initially, the models produced **irrelevant or subjective content** and lacked s
 ## Contributing
 
 We welcome contributions to this project! Please contact yd2616@columbia.edu or wufengyi98@gmail.com.
+
+## Citation
+
+If you find this repository or our paper useful, please consider **starring** this repository and **citing** our paper:
+
+```bibtex
+@misc{dong2025havlnbenchmarkhumanawarenavigation,
+      title={HA-VLN: A Benchmark for Human-Aware Navigation in Discrete-Continuous Environments with Dynamic Multi-Human Interactions, Real-World Validation, and an Open Leaderboard}, 
+      author={Yifei Dong and Fengyi Wu and Qi He and Heng Li and Minghan Li and Zebang Cheng and Yuxuan Zhou and Jingdong Sun and Qi Dai and Zhi-Qi Cheng and Alexander G Hauptmann},
+      year={2025},
+      eprint={2503.14229},
+      archivePrefix={arXiv},
+      primaryClass={cs.AI},
+      url={https://arxiv.org/abs/2503.14229}, 
+}
+```
 
 ## License
 
