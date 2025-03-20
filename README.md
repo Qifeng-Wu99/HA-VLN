@@ -45,11 +45,11 @@ Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](htt
 ```bash
 conda create -n havlnce python=3.7
 conda activate havlnce
-pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 
-# install habitat-sim via conda
+# install habitat-sim via conda or install habitat-sim from source
+# conda
 conda install -c aihabitat -c conda-forge habitat-sim=0.1.7 headless
-# install habitat-sim from source
+# source
 git clone --branch v0.1.7 https://github.com/facebookresearch/habitat-sim.git
 cd habitat-sim
 pip install -r requirements.txt
@@ -58,10 +58,11 @@ sudo apt-get install -y --no-install-recommends \
      libjpeg-dev libglm-dev libgl1-mesa-glx libegl1-mesa-dev mesa-utils xorg-dev freeglut3-dev
 python setup.py install --headless
 
+cd ..
 
 git clone --branch v0.1.7 https://github.com/facebookresearch/habitat-lab.git
 cd habitat-lab
-pip install -r habitat/requirements.txt
+pip install -r requirements.txt
 pip install -r habitat_baselines/rl/requirements.txt
 python setup.py develop --all # install habitat and habitat_baselines
 cd $(git rev-parse --show-toplevel)
@@ -87,7 +88,8 @@ Finally, you should install necessary packages for agent.
 
 ```bash
 pip install -r requirements.txt
-pip install importlib-metadata==4.13.0 termcolor==2.0.0 werkzeug==2.2.0 tensorboard==1.15
+pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+pip install importlib-metadata==4.13.0 termcolor==2.0.0 werkzeug==2.2.0 tensorboard==1.15 Pillow==6.2.2 setuptools==59.5.0
 ```
 
 ---
