@@ -61,7 +61,7 @@ python setup.py install --headless
 
 git clone --branch v0.1.7 https://github.com/facebookresearch/habitat-lab.git
 cd habitat-lab
-pip install -r habitat/requirements.txt
+pip install -r requirements.txt
 pip install -r habitat_baselines/rl/requirements.txt
 python setup.py develop --all # install habitat and habitat_baselines
 cd $(git rev-parse --show-toplevel)
