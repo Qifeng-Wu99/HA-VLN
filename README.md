@@ -87,9 +87,8 @@ cd $(git rev-parse --show-toplevel)
 Finally, you should install necessary packages for agent.
 
 ```bash
-pip install -r requirements.txt
 pip install torch==1.9.1+cu111 torchvision==0.10.1+cu111 -f https://download.pytorch.org/whl/torch_stable.html
-pip install importlib-metadata==4.13.0 termcolor==2.0.0 werkzeug==2.2.0 tensorboard==1.15 Pillow==6.2.2 setuptools==59.5.0
+pip install -r requirements.txt
 ```
 
 ---
