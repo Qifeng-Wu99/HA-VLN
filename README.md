@@ -142,7 +142,7 @@ We use nine cameras to annotate any anomalies, such as levitation or model clipp
 
 To use it, you need to modify the data path as
  ```
-data_path = "../Data/HAPS2_0"
+data_path = "../Data"
 output_path = "test/"
 json_path = "../Data/Multi-Human-Annotations/human_motion.json"
  ```
