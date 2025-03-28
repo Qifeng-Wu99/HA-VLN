@@ -140,12 +140,15 @@ We use nine cameras to annotate any anomalies, such as levitation or model clipp
   - **8 side cameras:** $\theta_{\text{lr}}^{i} = \frac{\pi i}{8}$, alternate **up/down tilt**.
   - **1 overhead camera:** $\theta_{\text{ud}}^{9} = \frac{\pi}{2}$.
 
-To use it, you need to modify the data path as
- ```
-data_path = "../Data"
+To reproduce the [**Multi-view human annotation videos**](https://drive.google.com/drive/folders/1XvGHgLJ0MFDNY_k_iVwE_oGpfBfBaZif?usp=sharing), run the following script:
+```
+cd scripts
+python3 human_scene_fusion.py
+```
+To modify the output data path, change the following line in [scripts/human_scene_fusion.py](scripts/human_scene_fusion.py), or the results will be output in "scripts/test" by default.
+```
 output_path = "test/"
-json_path = "../Data/Multi-Human-Annotations/human_motion.json"
- ```
+```
 
 ---
 
