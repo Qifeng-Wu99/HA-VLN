@@ -66,3 +66,10 @@ HUMAN_COUNTING: True
 ## HA-VLN-CE metrics
 
 Also, the new metrics (SR, CR, and TCR) metioned in our paper are provied in [metric.py](metric.py).
+
+
+## All settings
+
+we provides 4 setting: 1) [HAVLNCE+HAR2R](config/HAVLNCE_task.yaml), 2) [HAVLNCE+R2R](config/HAVLNCE_R2R_task.yaml), 3) [VLNCE+R2R](config/VLNCE_task.yaml), 4) [VLNCE+HAR2R](config/VLNCE_HAR2R_task.yaml)
+
+For using different settings, you need to modify the BASE_TASK_CONFIG_PATH in [agent config](../agent/config/cma_pm_da_aug_tune.yaml)
