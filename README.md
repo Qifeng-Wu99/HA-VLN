@@ -1,6 +1,7 @@
 # Human-Aware Vision-and-Language Nagivation (HA-VLN)
 [![arXiv](https://img.shields.io/badge/arXiv-2503.14229-red)](https://arxiv.org/abs/2503.14229) 
 ![License](https://img.shields.io/badge/license-MIT-blue)
+[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/fly1113/HA-VLN)
 
 * 🚀 [Project Web Page](https://ha-vln-project.vercel.app/)
 * 📂 [Dataset](https://drive.google.com/drive/folders/1WrdsRSPp-xJkImZ3CnI7Ho90lnhzp5GR?usp=sharing)
