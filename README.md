@@ -1,10 +1,40 @@
-# Human-Aware Vision-and-Language Nagivation (HA-VLN)
-[![arXiv](https://img.shields.io/badge/arXiv-2503.14229-red)](https://arxiv.org/abs/2503.14229) 
-![License](https://img.shields.io/badge/license-MIT-blue)
-[![Hugging Face](https://img.shields.io/badge/HuggingFace-Dataset-yellow?logo=huggingface&logoColor=yellow)](https://huggingface.co/datasets/fly1113/HA-VLN)
+<br>
+<p align="center">
 
-* 🚀 [Project Web Page](https://ha-vln-project.vercel.app/)
-* 📂 [Dataset](https://drive.google.com/drive/folders/1WrdsRSPp-xJkImZ3CnI7Ho90lnhzp5GR?usp=sharing)
+<h1 align="center"><strong>Human-Aware Vision-and-Language Nagivation (HA-VLN)</strong></h1>
+  <p align="center"><span><a href=""></a></span>
+              <a>Yifeng Dong<sup>*</sup>,</a>
+              <a>Fengyi Wu<sup>*</sup>,</a>
+              <a>Qi He<sup>*</sup>,</a>
+              <a>Heng Li,</a>
+              <a>Minghan Li,</a>
+              <a>Zebang Cheng,</a>
+              <a>Yuxuan Zhou,</a>
+              <a>Jingdong Sun,</a>
+              <a>Zhi-Qi Cheng<sup>†</sup>,</a>
+              <a>Qi Dai,</a>
+              <a>Alexander G Hauptmann</a>
+    <br>
+    <sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding author<br>
+  </p>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2503.14229" target="_blank">
+    <img src="https://img.shields.io/badge/arXiv-2503.14229-red">
+  </a>
+  <a href="https://ha-vln-project.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Project-HAVLN-blue">
+  </a>
+  <a href="https://huggingface.co/datasets/fly1113/HA-VLN" target="_blank">
+    <img src="https://img.shields.io/badge/Huggingface-dataset-yellow">
+  </a>
+  <a href="https://drive.google.com/drive/folders/1WrdsRSPp-xJkImZ3CnI7Ho90lnhzp5GR?usp=sharing" target="_blank">
+    <img src="https://img.shields.io/badge/Googledrive-dataset-purple">
+  </a>
+  <a href="https://github.com/F1y1113/HA-VLN/blob/main/LICENSE" target="_blank">
+    <img src="https://img.shields.io/badge/License-MIT-green">
+  </a>
+</p>
 
 ## 🧭 What does HA-VLN look like?
 
