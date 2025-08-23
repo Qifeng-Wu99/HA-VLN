@@ -3,7 +3,7 @@
 
 <h1 align="center"><strong>Human-Aware Vision-and-Language Nagivation (HA-VLN)</strong></h1>
   <p align="center"><span><a href=""></a></span>
-              <a>Yifeng Dong<sup>*</sup>,</a>
+              <a>Yifei Dong<sup>*</sup>,</a>
               <a>Fengyi Wu<sup>*</sup>,</a>
               <a>Qi He<sup>*</sup>,</a>
               <a>Heng Li,</a>
