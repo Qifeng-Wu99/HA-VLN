@@ -3,19 +3,19 @@
 
 <h1 align="center"><strong>Human-Aware Vision-and-Language Nagivation (HA-VLN)</strong></h1>
   <p align="center"><span><a href=""></a></span>
-              <a>Yifei Dong<sup>*</sup>,</a>
-              <a>Fengyi Wu<sup>*</sup>,</a>
-              <a>Qi He<sup>*</sup>,</a>
-              <a>Heng Li,</a>
-              <a>Minghan Li,</a>
-              <a>Zebang Cheng,</a>
-              <a>Yuxuan Zhou,</a>
-              <a>Jingdong Sun,</a>
-              <a>Zhi-Qi Cheng<sup>†</sup>,</a>
-              <a>Qi Dai,</a>
-              <a>Alexander G Hauptmann</a>
+              <a>Yifei Dong<sup>1,*</sup>,</a>
+              <a>Fengyi Wu<sup>1,*</sup>,</a>
+              <a>Qi He<sup>1,*</sup>,</a>
+              <a>Heng Li<sup>1</sup>,</a>
+              <a>Minghan Li<sup>2</sup>,</a>
+              <a>Zebang Cheng<sup>1</sup>,</a>
+              <a>Yuxuan Zhou<sup>3</sup>,</a>
+              <a>Jingdong Sun<sup>4</sup>,</a>
+              <a>Zhi-Qi Cheng<sup>1,†</sup>,</a>
+              <a>Qi Dai<sup>5</sup>,</a>
+              <a>Alexander G Hauptmann<sup>4</sup></a>
     <br>
-    <sup>*</sup>Equal Contribution, <sup>†</sup>Corresponding author<br>
+    <sup>1</sup>University of Washington, <sup>2</sup>Galbot, <sup>3</sup>University of Mannheim, <sup>4</sup>Carnegie Mellon University, <sup>5</sup>Microsoft Research<br>
   </p>
 
 <p align="center">
