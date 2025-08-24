@@ -15,7 +15,7 @@
               <a>Qi Dai<sup>5</sup>,</a>
               <a>Alexander G Hauptmann<sup>4</sup></a>
     <br>
-    <sup>1</sup>University of Washington, <sup>2</sup>Galbot, <sup>3</sup>University of Mannheim, <sup>4</sup>Carnegie Mellon University, <sup>5</sup>Microsoft Research<br>
+    <sup>1</sup>University of Washington, <sup>2</sup>Galbot, <sup>3</sup>University of Mannheim, <br><sup>4</sup>Carnegie Mellon University, <sup>5</sup>Microsoft Research<br>
   </p>
 
 <p align="center">
