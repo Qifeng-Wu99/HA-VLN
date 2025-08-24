@@ -23,7 +23,7 @@
     <img src="https://img.shields.io/badge/arXiv-2503.14229-red">
   </a>
   <a href="https://ha-vln-project.vercel.app/" target="_blank">
-    <img src="https://img.shields.io/badge/Project-HAVLN-blue">
+    <img src="https://img.shields.io/badge/Webpage-HAVLN-blue">
   </a>
   <a href="https://huggingface.co/datasets/fly1113/HA-VLN" target="_blank">
     <img src="https://img.shields.io/badge/Huggingface-dataset-yellow">
