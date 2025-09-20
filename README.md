@@ -81,8 +81,8 @@ We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VL
 
 ## 🚀 Quick Start
 ```bash
-git clone https://github.com/F1y1113/HAVLN-CE.git
-cd HAVLN-CE
+git clone https://github.com/F1y1113/HA-VLN.git
+cd HA-VLN
 ```
 Set up a Conda environment for the simulator.
 Please install habitat-lab (v0.1.7) and habitat-sim (v0.1.7) follow [ETPNav](https://github.com/MarSaKi/ETPNav/) (please note that we use python==3.7).
