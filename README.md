@@ -36,6 +36,10 @@
   </a>
 </p>
 
+<div align="center">
+  <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
+</div>
+
 ## 🧭 What does HA-VLN look like?
 
 Navigation Demo 1|Navigation Demo 2
@@ -57,10 +61,6 @@ If you find this repository or our paper useful, please consider **starring** th
 ```
 
 ## Abstract
-
-<div align="center">
-  <img src="demo/figs/task_define_final-1.png" alt="image" width="700"/>
-</div>
 
 We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VLN to include both discrete (**HA-VLN-DE**) and continuous (**HA-VLN-CE**) environments with social behaviors. The [HA-VLN Simulator](HASimulator) enables real-time rendering of human activities and provides unified APIs for navigation development. It introduces the Human Activity and Pose Simulation ([**HAPS 2.0 Dataset**](Data/HAPS2_0)) with detailed 3D human motion models and the HA Room-to-Room ([**HA-R2R**](Data/HA-R2R)) Dataset with complex navigation instructions that include human activities. We propose an HA-VLN Vision-and-Language model ([**HA-VLN-VL**](agent)) and a Cross-Model Attention model ([**HA-VLN-CMA**](agent)) to address visual-language understanding and dynamic decision-making challenges.
 
