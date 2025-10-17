@@ -6,16 +6,16 @@
               <a>Yifei Dong<sup>1,*</sup>,</a>
               <a>Fengyi Wu<sup>1,*</sup>,</a>
               <a>Qi He<sup>1,*</sup>,</a>
+              <a>Zhi-Qi Cheng<sup>1,†</sup>,</a>
               <a>Heng Li<sup>1</sup>,</a>
               <a>Minghan Li<sup>2</sup>,</a>
               <a>Zebang Cheng<sup>1</sup>,</a>
-              <a>Yuxuan Zhou<sup>3</sup>,</a>
-              <a>Jingdong Sun<sup>4</sup>,</a>
-              <a>Zhi-Qi Cheng<sup>1,†</sup>,</a>
-              <a>Qi Dai<sup>5</sup>,</a>
-              <a>Alexander G Hauptmann<sup>4</sup></a>
+              <a>Yuxuan Zhou<sup>1</sup>,</a>
+              <a>Jingdong Sun<sup>3</sup>,</a>
+              <a>Qi Dai<sup>4</sup>,</a>
+              <a>Alexander G Hauptmann<sup>3</sup></a>
     <br>
-    <sup>1</sup>University of Washington, <sup>2</sup>Galbot, <sup>3</sup>University of Mannheim, <br><sup>4</sup>Carnegie Mellon University, <sup>5</sup>Microsoft Research<br>
+    <sup>1</sup>UW, <sup>2</sup>Galbot, <sup>3</sup>CMU, <sup>4</sup>Microsoft Research<br>
   </p>
 
 <p align="center">
