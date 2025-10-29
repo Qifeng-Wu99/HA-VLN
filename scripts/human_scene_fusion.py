@@ -153,6 +153,8 @@ def process(scan, viewpoints):
         obj_templates_mgr = sim.get_object_template_manager()
         glb_folder_path = os.path.join(f"{data_path}/HAPS2_0/{category}_{index}/")   
         glb_files = load_glb_files(glb_folder_path)
+        glb_files.sort()
+        
         for glb_file in glb_files:
             template_id = obj_templates_mgr.load_configs(glb_file)[0]
             object_template_ids.append(template_id)
