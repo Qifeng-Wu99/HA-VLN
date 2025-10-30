@@ -72,6 +72,7 @@ We present Human-Aware Vision-and-Language Navigation (**HA-VLN**), expanding VL
   - [📥 Download Dataset](#-download-dataset)
   - [🔄 Dataset Organization](#-dataset-organization)
   - [🌆 Human-Scene Fusion](#-human-scene-fusion)
+  - [🌆 Navigate within a Scene Yourself](#-Navigate-within-a-Scene-Yourself)
   - [🖥️ Real-time Human Rendering](#-real-time-human-rendering)
   - [📊 Training](#-training)
   - [📈 Visualization](#-visualization)
@@ -209,6 +210,8 @@ cd scritps
 python demo.py --scan 1LXtFkjw3qL
 ```
 You may change the scan id to that of the scene you want to explore.
+
+[![Video demo](https://img.shields.io/badge/▶️-Watch%20Demo-blue)](demo/vids/havln-demo_1.mp4)
 
 
 ---
