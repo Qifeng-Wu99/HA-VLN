@@ -211,7 +211,9 @@ python demo.py --scan 1LXtFkjw3qL
 ```
 You may change the scan id to that of the scene you want to explore.
 
-[![Video demo](https://img.shields.io/badge/▶️-Watch%20Demo-blue)](demo/vids/havln-demo_1.mp4)
+
+<video src="demo/vids/havln-demo_1.mp4" controls width="640" />
+
 
 
 ---
